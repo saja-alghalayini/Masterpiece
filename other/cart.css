@@ -1,0 +1,140 @@
+body{
+    margin: 0;
+    background-color: #eaeaea;
+}
+
+
+nav{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: row;
+    padding-right: 50px;
+    background-color: #92b1e065;
+  }
+  
+  nav a{
+    color: #8461a8;
+    text-decoration: none;
+    font-family: 'Times New Roman', Times, serif;
+    margin: 20px;
+    font-size: 22px;
+    
+  }
+
+.board{
+    background-color: white;
+    width: 75%;
+    margin: 30px auto;
+    padding: 30px 60px;
+    font-family: 'Times New Roman', Times, serif;
+
+}
+
+table{
+    border-collapse: collapse;
+    width: 100%;
+}
+
+th, td{
+    padding: 10px;
+    border: 0.1px solid #7997c5;
+    color: #653B88;
+}
+
+
+td{
+    text-align: center;
+}
+
+.total{
+    padding: 25px;
+    margin-top: 30px;
+    width: fit-content; 
+    border: 1px solid #7997c5;
+    margin-left: 70%;
+}
+
+.h3{
+    color: #653B88;
+}
+
+.change{
+    width: fit-content;
+    padding: 15px 35px;
+    background-color: #9D84B7;
+    color: #B3E8E5;
+    border-radius: 5px;
+    cursor: pointer;
+    margin: auto;
+    border: 1px solid #9D84B7;
+    margin-left: 70px;
+}
+
+.change:hover{
+  background-color: #71ccc7cd;
+  color: #9D84B7;
+  border: 1px solid #B3E8E5;
+}
+
+
+
+#footerdiv{
+    background-color: #7997c565;
+    color: #653B88;
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 5% 0;
+}
+
+footer img {
+    width: 70%;
+}
+
+#footerdiv a{
+   
+    color: #653B88;
+    text-decoration: none;
+    font-size: larger;
+    font-weight: bold;
+    margin: 1% 0;
+}
+
+
+.fa-brands {
+    font-size: 50px;
+    margin: 0 2%;
+    
+}
+
+
+.col-3 {
+    -webkit-box-flex: 0;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%;
+    max-width: 25%;
+}
+
+.num{
+    position: relative;
+    color: #653B88;
+    width: 50px;
+    border-color: #7997c5;
+}
+
+
+
+.sub{/* The subtotal beside the cart icon in the navbar */
+    position: absolute;
+    top: -3px;
+    right: -25px;
+    padding: 5px;
+    color: #9D84B7;
+}
+
+/* .cartImg{
+    margin-top: -10px !important;
+} */
