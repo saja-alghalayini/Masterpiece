@@ -1,23 +1,6 @@
-<<<<<<< HEAD
 # Masterpiece - Multicolor 
 
 ![Markdown Logo](images/logo.png)
-
-***
-## Introduction
-After We Learn Set of Topics Like:
-
-1. UI/Ux
-1. HTML5
-1. CSS3
-1. PHP
-1. BOOTSTRAP
-1. Git
-1. MySQL
-
-WE DO IT!
-
-Create Our Ecommerce WebSite
 
 ## Project Overview
 
