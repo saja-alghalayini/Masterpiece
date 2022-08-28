@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 # Masterpiece - Multicolor 
 
 ![Markdown Logo](images/logo.png)
@@ -26,3 +27,4 @@ We have created a Ecommerce website, specialize in cosmetic the customer can exp
 
 1. Project Wireframe & Mockup
    * [UI Link](https://www.figma.com/file/BmmwvYvIAloO8eQ7hd77uP/Multicolor)
+
