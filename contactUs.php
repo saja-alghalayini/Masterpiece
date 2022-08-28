@@ -90,7 +90,7 @@ $pop='';
             <div>
             <?php
               echo '<a class="num" href="' . $cartpath . '">
-              '.$pop.'<img src="./Images/cart.png" alt="cart" style="height:50px ;"></a>';
+              '.$pop.'<i class="fa fa-shopping-cart" aria-hidden="true"></i></a>';
 
               if(!isset($_GET["id"])){
                 echo '<a href="login.php">Login</a>

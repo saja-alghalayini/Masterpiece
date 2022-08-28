@@ -17,7 +17,7 @@
             <span>Admin Dashboard</span>
         </div>
         <div class="col">
-            <a href="AdminLogin.php"><span>Log Out</span></a>
+            <a href="AdminLogin.php">Log Out</a>
         </div>
     </div>
     </nav>

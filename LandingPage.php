@@ -85,7 +85,7 @@ if(!isset($_GET["id"])){
       <div>
       <?php
         echo '<a class="num" href="' . $cartpath . '">
-        '.$pop.'<img src="./Images/cart.png" alt="cart" style="height:50px ;"></a>';
+        '.$pop.'<i class="fa fa-shopping-cart" aria-hidden="true"></i></a>';
 
         if(!isset($_GET["id"])){
           echo '<a href="login.php">Login</a>
@@ -239,8 +239,8 @@ if(!isset($_GET["id"])){
                     {
                       $pbs= floor(($row['price'])/((100-$row['sale_pre'])/100)); //// price before sale 
 
-                      echo ' <div class="col-3">
-                      <img height="250px" src="'.$row['image'].'">
+                      echo ' <div class="col-3" >
+                      <img height="250px"; width="280px" src="'.$row['image'].'">
                       <h4>'.$row['name'].'</h4>
                       <p id = "price_befor">'.$pbs.' JD</p>
                       <p id = "price_after">'.$row['price'].' JD</p>
@@ -269,10 +269,8 @@ if(!isset($_GET["id"])){
         <div class="col-3">
             <img src="./Images/logo.png">
         </div>
-
-
-        <div class="col-3" style="width:100px">
-            <h1 style="text-align: center;"> Stay In Touch </h1><br>
+        <div class="col-3">
+            <h1 style="text-align: center;">Stay In Touch</h1><br>
             <h2 style="text-align: center;"></h2>
             <p style="text-align: center;" >
             <a href="https://web.facebook.com/Saja.AlGhalayini/" target="_blank"><i class="fa-brands fa-facebook" style="display: inline;"></a></i>
@@ -287,7 +285,6 @@ if(!isset($_GET["id"])){
 <p> If I could say it in words there would be no reason to paint.<br>
 — Edward Hopper. <b>
 </p>
-
     </div>
             </div>
     </footer>

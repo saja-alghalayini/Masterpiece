@@ -8,16 +8,24 @@ nav img {
 
 nav span {
     color: #8461a8;
-    /* margin: 0 1%; */
-    margin-right: 10%;
-    /* margin-top: 10px; */
+    margin-left: 2%;
     font-family: 'Times New Roman', Times, serif;
-    font-size: 28px;
+    font-size: 30px;
 }
 
 nav span:hover{
     color: #56a5a1;
-    text-decoration: dotted;
+}
+
+a{
+    color: #8461a8;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 21px;
+}
+
+
+a:hover{
+    color: #56a5a1;
 }
 
 
@@ -33,22 +41,28 @@ nav span:hover{
 }
 
 .container div {
-    border: solid 1px #0F848C;
+    border: solid 1px #9D84B7;
     border-radius: 10px;
     margin: 5%;
     padding: 2%;
     text-align: center;
     display: inline-block;
 }
+
+
 .fa-solid{
     font-size: 100px;
 }
+
+
 .container a {
-    color: black;
+    color: #9D84B7;
     text-decoration: none;
 }
+
+
 .container a:hover {
-    color: #0F848C;
+    color: #71ccc7cd;
     text-decoration: none;
 }
 
@@ -63,8 +77,8 @@ th{
 
 td{
     text-align: center;
-    border-top: 1px solid rgb(140, 140, 140);
-    border-bottom: 1px solid rgb(140, 140, 140);
+    border-top: 1px solid #71ccc7cd;
+    border-bottom: 1px solid #71ccc7cd;
     padding: 20px 0;
 }
 

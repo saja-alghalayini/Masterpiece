@@ -21,6 +21,21 @@ nav{
     
   }
 
+
+.num{
+    position: relative;
+}
+
+
+.sub{
+    position: absolute;
+    top: -5px;
+    right: 24px;
+    padding: 5px;
+    color: #9D84B7;
+}
+
+
 .board{
     background-color: white;
     width: 75%;

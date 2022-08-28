@@ -169,7 +169,7 @@ footer img {
             <div>
               <?php
               echo '<a class="num" href="' . $cartpath . '">
-              '.$pop.'<a href="'.$cartpath.'"><i class="fa-solid fa-cart-shopping"></i></a>';
+              '.$pop.'<i class="fa fa-shopping-cart" aria-hidden="true"></i></a>';
 
               if(!isset($_GET["id"])){
                 echo '<a href="login.php">Login</a>

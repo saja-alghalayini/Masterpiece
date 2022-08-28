@@ -81,6 +81,20 @@ body{
     }
 
 
+.num{
+  position: relative;
+}
+
+
+.sub{
+  position: absolute;
+  top: -5px;
+  right: 24px;
+  padding: 5px;
+  color: #9D84B7;
+}
+
+
     #footerdiv{
       background-color: #7997c565;
       color: #653B88;
@@ -91,9 +105,13 @@ body{
       align-items: center;
       padding: 5% 0;
   }
+
+  
   footer img {
       width: 70%;
   }
+
+
   #footerdiv a{
      
       color: #653B88;
@@ -105,7 +123,7 @@ body{
 
 
 .fa-brands {
-    font-size: 50px;
+    font-size: 40px;
     margin: 0 2%;
     
 }
@@ -119,45 +137,6 @@ body{
 }
 
 
-.num{
-  position: relative;
-}
-
-
-.sub{
-  position: absolute;
-  top: -6px;
-  right: 39px;
-  padding: 5px;
-  color: #9D84B7;
-}
-
-
-/* @keyframes pulse {
-from {
-    transform : scale(1);
-    opacity   : 1;
-}
-50% {
-    transform : scale(0.75);
-    opacity   : 0.25;
-}
-to {
-    transform : scale(1);
-    opacity   : 1;
-}
-}
-.img-fluid:hover{
-animation : pulse 2s ; 
-}
-.rounded-circle{
-width: 40%;
-}
-
-.rounded-circle:hover{
-animation : pulse 2s ; 
-}
-
 .shadow-sm {
-box-shadow: 0 .125rem .25rem #9679b5!important;
-} */
+  box-shadow: 0 .125rem .25rem #9679b5!important;
+}

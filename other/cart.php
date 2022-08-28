@@ -126,10 +126,13 @@ $contact= '../contactUS.php?id='.$id;
 /* --------------------------------------------------------------------- */
 
             echo '<a class="num" href="' . $cartpath . '">
-            '.$pop.'<a href="'.$cartpath.'"><img id="cartImg" src="../Images/cart.png" alt="cart" style=" height:50px; "></a>';
+            '.$pop.'<i class="fa fa-shopping-cart" aria-hidden="true"></i></a>';
+
             if (!isset($_GET["id"])) {
                 echo '<a href="login.php">Login</a>
                       <a href="signup.php">Register</a>';
+
+                      
             } else {
                 echo '<a href="../userpage.php?id=' . $id . '">Account</a>';
                 echo '<a href="../LandingPage.php">Log Out</a>';

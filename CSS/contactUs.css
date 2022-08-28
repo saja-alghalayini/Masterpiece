@@ -16,6 +16,20 @@ nav a{
   
 }
 
+.num{
+  position: relative;
+}
+
+
+.sub{
+  position: absolute;
+  top: -5px;
+  right: 24px;
+  padding: 5px;
+  color: #9D84B7;
+}
+
+
 .text-center {
   text-align: center!important;
   color: #8461a8;
@@ -58,6 +72,7 @@ footer img {
 footer img {
   width: 70%;
 }
+
 #footerdiv a{
  
   color: #653B88;

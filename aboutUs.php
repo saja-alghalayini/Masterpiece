@@ -82,8 +82,8 @@ $pop='';
             
             <div >
             <?php
-              echo '<a class="num" href="' . $cartpath . ' " style="margin: 1px;">
-              '.$pop.'<img src="./Images/cart.png" alt="cart" style="height: 50px;"></a>';
+              echo '<a class="num" href="' . $cartpath . ' " >
+              '.$pop.'<i class="fa fa-shopping-cart" aria-hidden="true"></i></a>';
 
               if(!isset($_GET["id"])){
                 echo '<a href="login.php">Login</a>
@@ -195,9 +195,9 @@ $pop='';
           <div class="row text-center flx">
           
             <!-- Team item-->
-            <div class="col-xl-4 col-sm-6 mb-5 ">
-              <div class="bg-white rounded shadow-sm py-5 px-4"><img src=".\img\Saja.png" alt=""  width="100" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-sm">
-                <h5 class="mb-0">Saja Al Ghalayini </h5><span class="small text-uppercase text-muted">Project Owner <br>Full Stack Web Developer</span>
+            <div class="col-xl-4 col-sm-6 mb-5">
+              <div class="bg-white rounded shadow-sm py-5 px-4 "><img src=".\img\Saja.png" alt=""  width="175" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-bg">
+                <h4 class="mb-0"> Saja Al Ghalayini </h4> <span class="small text-uppercase text-muted">Project Owner <br> Full Stack Web Developer</span>
                 <ul class="social mb-0 list-inline mt-3">
                   <li class="list-inline-item"><a href="https://www.facebook.com/Saja.AlGhalayini" target="_blank" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
                   <li class="list-inline-item"><a href="https://github.com/saja-alghalayini" target="_blank" class="social-link"><i class="fa fa-github"></i></a></li>

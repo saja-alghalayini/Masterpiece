@@ -106,7 +106,7 @@ $pop='';
       <div>
       <?php
         echo '<a class="num" href="' . $cartpath . '">
-        '.$pop.'<img src="./Images/cart.png" alt="cart" style="height:50px ;"></a>';
+        '.$pop.'<i class="fa fa-shopping-cart" aria-hidden="true"></i></a>';
 
         if(!isset($_GET["id"])){
           echo '<a href="login.php">Login</a>
@@ -162,11 +162,11 @@ $pop='';
                          <a href="Product.php?pro_id=' . $row["id"] . $loginpath . '"><img src="' . $row["image"] . '" alt="Product"></a>
                          
                          <h5>' . $row["category_name"] . '</h5>
-                         <a href="Product.php?pro_id=' . $row["id"] . $loginpath . '"><h3>' . $row["name"] . '</h3></a>
+                         <a href="Product.php?pro_id=' . $row["id"] . $loginpath . '">  <h3>' . $row["name"] . '</h3></a>
 
                          <div class="rearrange">
-                         <span id="price_after">' . $row["price"] . ' JD</span>
-                         <span id="price_befor">' . $pbs . ' JD</span>
+                         <span id="price_after">' . $row["price"] . ' JD  </span>
+                         <span id="price_befor">'   . $pbs . ' JD</span>
                          </div>
 
                          <a href=' . $cartpath . ' id="addtocart">Add to Cart</a>

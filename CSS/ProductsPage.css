@@ -66,12 +66,14 @@ a{
     color: #B3E8E5;
     border: none;
     border-radius: 50px;
-    width: 40%;
+    width: 60%;
+    height: 5%;
     font-size: 20px;
     padding: 3%;
+    padding-top: 4%;
     display: inline-block;
     text-align: center;
-    margin-left: 28%;
+    margin-left: 19%;
     margin-top: 8%;
     
 }
@@ -90,9 +92,9 @@ a{
 }
 #price_after{
     color: #3DB0CA; 
-    font-size: 27px;
+    font-size: 23px;
     font-weight: bold;
-    margin: 6px;
+    /* margin: 6px; */
 }
 
 
@@ -106,9 +108,13 @@ a{
     align-items: center;
     padding: 5% 0;
 }
+
+
 footer img {
     width: 70%;
 }
+
+
 #footerdiv a{
    
     color: #653B88;
@@ -117,6 +123,8 @@ footer img {
     font-weight: bold;
     margin: 1% 0;
 }
+
+
 .fa-brands {
     font-size: 50px;
     margin: 0 2%;
@@ -131,6 +139,7 @@ footer img {
     max-width: 25%;
 }
 
+
 .rearrange{
     display: flex;
     align-items: center;
@@ -141,25 +150,29 @@ footer img {
     color: #561F8F;
 }
 
+
 h5{
     color: #561F8F;
 }
 
+
 h3{
-    height: 35px;
+    /* height: 35px; */
     color: #15778d;
     font-size: 23px;
+    text-align: center;
 }
+
 
 .num{
     position: relative;
 }
+
 
 .sub{
     position: absolute;
     top: -5px;
     right: 24px;
     padding: 5px;
-    color: #42062c;
-    /* background-color: #063e42; */
+    color: #9D84B7;
 }

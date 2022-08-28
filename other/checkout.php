@@ -89,7 +89,7 @@ if ($result6->num_rows > 0) {
 <body>
     <div class="pop" style="display: <?php echo $non; ?>;">
         <div class="mess">
-            Your Order was successfully Placed Thank You for Buying from Multicolor, and for supporting our local artists.
+            Your Order Was Successfully Placed Thank You For Buying From Multicolor, and for supporting our local artists.
         </div>
     </div>
     <!-- <img src="../Images/categories background1.jpg" alt=""> -->
@@ -180,11 +180,11 @@ if ($result6->num_rows > 0) {
                     </div>
 
 
-                    <div class="street">
+                    <!-- <div class="street">
                         <label for="">Street</label>
                         <br>
                         <input type="text" value="Rosemary Street" class="street" id="street" required>
-                    </div>
+                    </div> -->
 
                 </div>
 

@@ -120,17 +120,13 @@ footer img {
 
 .num{
     position: relative;
-    color: #653B88;
-    width: 50px;
-    border-color: #7997c5;
 }
 
 
-
-.sub{/* The subtotal beside the cart icon in the navbar */
+.sub{
     position: absolute;
-    top: -3px;
-    right: -25px;
+    top: -5px;
+    right: 24px;
     padding: 5px;
     color: #9D84B7;
 }
