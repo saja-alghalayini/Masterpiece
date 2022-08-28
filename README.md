@@ -1,6 +1,6 @@
-# Project5 - Beauty-Care WebSite
-## Group Members  {**Ghufran Al-Momani**, **Ro'a Yaseen**, **Sara Kteifan**, **Saja Al-Ghalayini**, **Bahaa Al-deen**}
-![Markdown Logo](other/images/logo.png)
+# Masterpiece - Multicolor 
+
+![Markdown Logo](images/logo.png)
 
 ***
 ## Introduction
@@ -25,7 +25,4 @@ We have created a Ecommerce website, specialize in cosmetic the customer can exp
 ## Project Design
 
 1. Project Wireframe & Mockup
-   * [UI Link](https://www.figma.com/file/E0fWyZMNC0X8CYNKNO6BAO/Project-5?node-id=0%3A1)
-
-1. Project Repo
-   * [Repo Link](https://github.com/saja-alghalayini/cosmetics5)
+   * [UI Link](https://www.figma.com/file/BmmwvYvIAloO8eQ7hd77uP/Multicolor)
