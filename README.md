@@ -1,6 +1,6 @@
 # Masterpiece - Multicolor 
 
-![Markdown Logo](images/logo.png)
+![Multicolor Logo](./Images/logo.png)
 
 ## Project Overview
 
