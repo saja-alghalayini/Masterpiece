@@ -230,7 +230,7 @@ if(!isset($_GET["id"])){
     <div id="discount" class="container">
 
         <?php 
-      $sql= 'SELECT * from products where     sale_status=1 LIMIT 4;';
+      $sql= 'SELECT * from products where sale_status=1 LIMIT 3;';
       $result= mysqli_query($conn, $sql);
             $resultcheck = mysqli_num_rows($result);
                     if($resultcheck > 0)
@@ -261,7 +261,7 @@ if(!isset($_GET["id"])){
 
 
       
-    <!-- //////////////////Footer//////////////////// -->
+    <!-- ------------------------ Footer ------------------------ -->
 
     
     <footer>
@@ -277,7 +277,7 @@ if(!isset($_GET["id"])){
                     <a href="https://www.instagram.com/_saja_alghalayini/" target="_blank"><i class="fa-brands fa-instagram" style="display: inline;"></a></i>
                     <a href="https://www.linkedin.com/in/saja-al-ghalayini/" target="_blank"><i class="fa-brands fa-linkedin" style="display: inline;"></a></i>
                     <br>
-            <p style="text-align: center;">copyright <i class="fa-solid fa-copyright"></i> 2022 Multicolor</p>
+            <p style="text-align: center;"> copyright <i class="fa-solid fa-copyright"></i> 2022 Multicolor</p>
         </div>
         <div class="col-3">
         <h1> What Artiest Said </h1>

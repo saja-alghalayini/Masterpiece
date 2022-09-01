@@ -130,7 +130,7 @@ $pop='';
                       <a href="signup.php">Register</a>';
 
               }else{
-                echo '<a href="userpage.php?id='.$user_id.'">Account</a>';
+                echo '<a href="userpage.php?id='.$id.'">Account</a>';
                 echo '<a href="LandingPage.php">Log Out</a>';
               }
 
@@ -150,7 +150,7 @@ $pop='';
         
         <div class="board">
 
-        <h1 class="bhead">Category: <?php echo $cat_name['category_name'] ?></h1>
+        <h1 class="CatName">Category: <?php echo $cat_name['category_name'] ?></h1>
         <br>
         <div id="parent">
             <?php
