@@ -159,9 +159,8 @@ footer img {
             </div>
 
             <div>
-                <a href="">Home</a>
+                <a href="<?php echo $homepath; ?>">Home</a>
                 <a href="<?php echo $shoppath; ?>">Shop</a>
-                
                 <a href="<?php echo $about; ?>">About Us</a>
                 <a href="<?php echo $contact; ?>">Contact Us</a>
             </div>
@@ -192,7 +191,7 @@ footer img {
                 ?>
             </nav>
 
-        <section class="vh-100" style="background-color: #f4f5f7;">
+        <section class="vh-100">
         <div class="container py-5 h-100">
           <div class="row d-flex justify-content-center align-items-center h-100">
           <?php

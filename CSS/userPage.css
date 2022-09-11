@@ -1,12 +1,11 @@
 .gradient-custom {
-    background: radial-gradient(circle at 0.1% 99.8%, #8461a8 30%, #71ccc7cd 80%);
-
+    background: radial-gradient(circle at 0.1% 99.8%, #b3c0e3 40%, #bfa7da 80%);
     }
 
 
     .btn{
         background-color: #9D84B7;
-    color: #B3E8E5;
+        color: #B3E8E5;
         border: none;
         border-radius: none;
     }
@@ -15,15 +14,19 @@
         background-color: #71ccc7cd;
         color: #9D84B7;
     }
+
+
     .img-fluid {
         width: 80px;
         height: 80px;
         margin-top: 3rem;
     }
 
+
     .chang1{
         cursor: pointer;
     }
+    
 
     #footerdiv{
         background-color: #7997c565;
@@ -35,9 +38,13 @@
         align-items: center;
         padding: 5% 0;
     }
+
+
     footer img {
         width: 70%;
     }
+
+
     #footerdiv a{
        
         color: #653B88;
@@ -46,6 +53,8 @@
         font-weight: bold;
         margin: 1% 0;
     }
+
+
     .fa-brands {
         font-size: 50px;
         margin: 0 2%;
@@ -60,14 +69,18 @@
         max-width: 25%;
     }
 
+
     #uimg{
         font-size:x-small;
         color: white;
     }
+
+
     a{
         text-decoration: none;
     }
 
+    
     .num{
         position: relative;
     }

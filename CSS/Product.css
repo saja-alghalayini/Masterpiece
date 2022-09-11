@@ -51,7 +51,7 @@ h4 {
 }
 
 #price{
-    color: #555;
+    color: #3DB0CA;
 }
 
 #addtocart{
@@ -62,6 +62,7 @@ h4 {
     color: white;
     border: none;
     width: 50%;
+    border-radius: 50px;
     font-family: 'Times New Roman', Times, serif;
     font-size: 20px;
     padding: 3%;
@@ -70,50 +71,56 @@ h4 {
 
 #addtocart:hover{
     cursor: pointer;
-    
-    color: #471a76;
+    background-color: #71ccc7cd;
+    color: #9D84B7;
 }
 
 hr {
     background-color: #CCC;
 }
 
-#addrev {
+#addreview {
     border: #CCC 1px solid;
     padding: 2%;
     margin: 0 2%;
 }
 
-#addrev h3 {
-    color: #9D84B7;
+#addreview h3 {
+    color: #3092a9cf;
 }
 
 
 textarea {
     width: 80%;
     height: 20vh;
+    color: #83bac7cd;
 }
 
-.fa-star {
-    color: #bbb;
+.Reviews{
+    color: #653B88;
 }
 
+/* Start Users Review */
 #revs {
-    border: #CCC 1px solid;
+    border: hsla(192, 31%, 60%, 0.695) 1px solid;
     padding: 0.5% 2%;
     margin: 0 2%;
+    width: 78%;
 }
 
 #revs i {
-    border: black 1px solid;
+    border: #3DB0CA 1px solid;
     border-radius: 100%;
     padding: 5px;
 }
 
 #revs span{
-    font-size: 25px;
+    font-size: 19px;
     font-weight: bold;
+    color: #9D84B7;
 }
+/* End Users Review */
+
 #price_befor{ 
     color: #9D84B7;
     font-size: x-large;

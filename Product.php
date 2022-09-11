@@ -155,7 +155,7 @@ $pop='';
 
         <br>
         <div id="parent">
-            <!-- before sale -->
+            <!-- ----------------------- with sale ----------------------- -->
             <?php
             if (isset($_GET["id"])) {
                 $ids ='&id='.$_GET["id"];
@@ -168,14 +168,14 @@ $pop='';
             <div>
                 <img src="' . $row['image'] . '" alt="Product">
             </div>
-
+                 
             <div>
-                <h1>' . $row['name'] . '</h1>
-                <h4 style="color:#3DB0CA;">Category:' . $row['category_name'] . '</h4>
+                <h1 style="color: #15778d;">' . $row['name'] . '</h1>
+                <h4 style="color: #561F8F;"> Category:' . $row['category_name'] . '</h4>
                 <p id = "price_befor">' . $pbs . '</p>
-                <h1 id="price" style="color:#3DB0CA;">' . $row['price'] . ' JD</h1>
+                <h1 id="price">' . $row['price'] . ' JD</h1>
                 <p>' . $row['description'] . '</p><br>
-                <a href="Product.php?pro_id=' . $pro_id. $ids . '&add=1" id="addtocart" style="background:#3DB0CA;">Add to Cart</a>
+                <a href="Product.php?pro_id=' . $pro_id. $ids . '&add=1" id="addtocart" >Add to Cart</a>
             </div>';
             } else {
                 echo '
@@ -183,6 +183,8 @@ $pop='';
                 <img src="' . $row['image'] . '" alt="Product">
             </div>
 
+
+        <!-- ----------------------- without sale ----------------------- -->
             <div>
                 <h1>' . $row['name'] . '</h1>
                 <h4>Category:' . $row['category_name'] . '</h4>
@@ -192,12 +194,12 @@ $pop='';
             </div>';
             }
             ?>
-            <!-- after sale -->
+            
         </div>
 
         <hr>
 
-        <h1>Reviews</h1>
+        <h1 class="Reviews">Reviews</h1>
 
         <?php
         $sql = "SELECT * FROM comments JOIN user ON comments.user_id = user.user_id JOIN products ON comments.product_id = products.id Where product_id=$pro_id;";
@@ -212,19 +214,18 @@ $pop='';
                 }
                 echo '<div id="revs">
                                 <p><img src="'.$imgsrc.'" style="width: 5%; height: 5%; border-radius:100%;"> <span style="position: relative; bottom:15px;">' . $row2['first_name'] . ' ' . $row2['last_name'] . '</span> </p>
-                                <p>' . $row2['comment'] . '</p>
+                                <p style="font-size: 20px; color: #7997c5d1;">' . $row2['comment'] . '</p>
                             </div>';
             }
         }
         ?>
         <br>
 
-        <div id="addrev">
-            <h2>Add your review</h2>
-            <h3>Your review*</h3>
+        <div id="addreview">
+            <h3>Add a new review here*</h3>
             <form method="post">
                 <textarea name="comment"></textarea>
-                <input type="submit" name="submitrev" id="addtocart" style="width: 20%; height: 50px; padding: 0;">
+                <input type="submit" name="submitrev" id="addtocart" style="width: 20%; height: 40px; padding: 0;">
                 <form>
         </div>
 
