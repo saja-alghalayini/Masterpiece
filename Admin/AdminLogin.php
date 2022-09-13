@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once('connect.php');
+include_once('../connect.php');
 
 if (isset($_POST['submit'])){
     $Email =$_POST['email'];
@@ -14,7 +14,7 @@ if (isset($_POST['submit'])){
          while ($row=mysqli_fetch_assoc($result)) {
           if($Email== ($row['email'])&& $Password== $row['pass'] && $row['is_admin']==1){
 
-             header('location:AdminDashboard.php');
+             header('location:..\Admin\AdminDashboard.php');
             
            }else{
 
@@ -37,51 +37,17 @@ if (isset($_POST['submit'])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./CSS/Admin.css">
+    <link rel="stylesheet" href="Admin.css">
     <script src="https://kit.fontawesome.com/aca8d5a1fa.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Admin Login</title>
-    <style>
-        .container div {
-            border:solid black 1px;
-            width: 80%;
-            margin-top: 100px;
-            border-radius: 0;
-        }
-        h1{
-        margin-bottom: 50px;
-        }
-        .error-icon,
-        .error-text {
-	        display: none;
-        }
 
-        #login{
-            /* letter-spacing: 3px; */
-            background-color: #9D84B7;
-            color: #71ccc7cd;
-            margin-top: 20px;
-            box-shadow:0 0 4px 4px #9D84B7;
-            border: none;
-            width: 20%;
-        }
-        #login:hover{
-            background-color: #71ccc7cd;
-            color: #9D84B7;
-            box-shadow:0 0 4px 4px #71ccc7cd;
-
-        }
-        #i11, #i22 {
-            width: 25px;
-        }
-
-    </style>
 </head>
 <body>
     <nav>
     <div id="parent">
         <div class="col-11">
-            <img src="./Images/logo.png" alt="logo">
+            <img src="../Images/logo.png" alt="logo">
             <span>Admin Dashboard</span>
         </div>
 
@@ -89,8 +55,10 @@ if (isset($_POST['submit'])){
     </nav>
 
     <div class="container">
+
     <form  method="post">
         <div>
+
         <h1> LOGIN </h1>
               <label for="Email" class="col-2">Email Address:</label>
               <input class="col-3" name='email' id="Email" value="" type="email"  required="true"><br><br>
@@ -100,8 +68,8 @@ if (isset($_POST['submit'])){
               <input class="col-3" name='Password' id="password" value="" type="password"  required="true"><br><br>
 
               
-              <img src="./img/icon-error (1).svg" class="error-icon" alt="" id='i22'>
-              <p class="error-text" id='two2'>wrong email or password</p> 
+              <img src="../img/icon-error (1).svg" class="error-icon" alt="" id='i22'>
+              <p class="error-text" id='two2'> wrong email or password </p> 
             
               <?php if(isset($wrong2)){echo $wrong2;}?>              
             

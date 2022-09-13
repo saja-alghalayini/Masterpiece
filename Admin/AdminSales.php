@@ -1,5 +1,5 @@
 <?php
-include_once 'connect.php';
+include_once '../connect.php';
 
 
 $query= "SELECT * FROM `order` INNER JOIN bill ON `order`.bill_id=bill.id INNER JOIN products ON `order`.product_id=products.id;";
@@ -24,7 +24,7 @@ if($check > 0){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./CSS/Admin.css">
+    <link rel="stylesheet" href="Admin.css">
     <script src="https://kit.fontawesome.com/aca8d5a1fa.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Admin Sales</title>
@@ -33,7 +33,7 @@ if($check > 0){
     <nav>
     <div id="parent">
         <div class="col-11">
-            <img src="./Images/logo.png" alt="logo">
+            <img src="../Images/logo.png" alt="logo">
             <a href="AdminDashboard.php"><span>Admin Dashboard</span></a>
         </div>
         <div class="col">

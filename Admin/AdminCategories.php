@@ -1,5 +1,5 @@
 <?php
-include_once 'connect.php';
+include_once '../connect.php';
 
 $display='none';
 $display1= "none";
@@ -59,7 +59,7 @@ $resultcheck = mysqli_num_rows($run);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./CSS/Admin.css">
+    <link rel="stylesheet" href="Admin.css">
     <script src="https://kit.fontawesome.com/aca8d5a1fa.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Admin categories</title>
@@ -69,11 +69,11 @@ $resultcheck = mysqli_num_rows($run);
     <nav>
     <div id="parent">
         <div class="col-11">
-            <img src="./Images/logo.png" alt="logo">
-            <a href="AdminDashboard.php"><span>Admin Dashboard</span></a>
+            <img src="../Images/logo.png" alt="logo">
+            <a href="../Admin/AdminDashboard.php"><span>Admin Dashboard</span></a>
         </div>
         <div class="col">
-            <a href="AdminLogin.php"><span>Log Out</span></a>
+            <a href="../Admin/AdminLogin.php"><span>Log Out</span></a>
         </div>
     </div>
     </nav>
@@ -87,8 +87,11 @@ $resultcheck = mysqli_num_rows($run);
     <hr>
 
     <div class="container">
+
     <p style="text-align: left; color: #888">Total number of categories: <?php echo $resultcheck; ?><p>
+
     <div id="editdiv" style="display: <?php echo $display?>;">
+
                 <form method="post">
                     <input type="hidden" value="<?php echo $cat_id?>" name="catid">
                     <label>Category Name:</label>
@@ -96,13 +99,18 @@ $resultcheck = mysqli_num_rows($run);
                     <input type="submit" value="Save" name="newcat">
                 </form>
     </div>
+
+
     <div id="adddiv" style="display: <?php echo $display1?>;">
+
                 <form method="post">
                     <label>Category Name:</label>
                     <input type="text"  name="newcatname" required>
                     <input type="submit" value="Add" name="addnewcat">
                 </form>
     </div>
+
+
     <table>
     <tr>
                 <th>ID</th>
@@ -110,31 +118,38 @@ $resultcheck = mysqli_num_rows($run);
                 <th>Edit</th>
                 <th>Delete</th>
             </tr>
+
+
             <?php
             if($resultcheck > 0)
                     {
                     while($row = mysqli_fetch_assoc($run))
                     {
                         $y= $row['category_id'];
+
             echo '<tr>
                     <td>'.$row['category_id'].'</td>
                     <td>'.$row['category_name'].'</td>
+
                     <td>
                     <form method="post">
                     <input type="hidden" value="'.$y.'" name="catid">
                     <input type="submit" value="Edit" name="editcat">
                     </form>
                     </td>
+                    
                     <td>
                     <form method="post">
                     <input type="hidden" value="'.$y.'" name="catid">
                     <input type="submit" value="Delete" name="deletecat">
                     </form>
                     </td>
+                    
                 </tr>
                 ';
                 }
                 }
+
                 echo '</table> <br><br>';
                 
             ?>

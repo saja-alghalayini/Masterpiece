@@ -102,7 +102,7 @@ $resultcheck = mysqli_num_rows($run);
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./CSS/Admin.css">
+    <link rel="stylesheet" href="./Admin/Admin.css">
     <script src="https://kit.fontawesome.com/aca8d5a1fa.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Admin Products</title>
@@ -112,10 +112,10 @@ $resultcheck = mysqli_num_rows($run);
     <div id="parent">
         <div class="col-11">
             <img src="./Images/logo.png" alt="logo">
-            <a href="AdminDashboard.php"><span>Admin Dashboard</span></a>
+            <a href=".\Admin\AdminDashboard.php"><span>Admin Dashboard</span></a>
         </div>
         <div class="col">
-            <a href="AdminLogin.php"><span>Log Out</span></a>
+            <a href="./Admin/AdminLogin.php"><span>Log Out</span></a>
         </div>
     </div>
     </nav>
@@ -129,52 +129,90 @@ $resultcheck = mysqli_num_rows($run);
     <hr>
 
     <div class="container">
+
     <p style="text-align: left; color: #888">Total number of products: <?php echo $resultcheck; ?><p>
     <div id="editdiv" style="display: <?php echo $display?>;">
+
                 <form action="?" method="post" enctype="multipart/form-data">
+
                     <input type="hidden" value="<?php echo $pro_id?>" name="proid">
+
                     <label>Change Image:</label>
                     <input type="file" name="file" id="file" required>
+
                     <input type="submit" value="Change Image" name="saveimg">
                 </form>
                 <hr>
+
+
                 <form  method="post">
                     <input type="hidden" value="<?php echo $pro_id?>" name="proid">
+
                     <label class="col-2">Category ID:</label>
                     <input class="col-5" type="text" value="<?php echo $newcatid?>" name="newcatid" required><br>
+
+
                     <label class="col-2">Name:</label>
                     <input class="col-5" type="text" value="<?php echo $newname?>" name="newname" required><br>
+
+
                     <label class="col-2">Price:</label>
                     <input class="col-5" type="text" value="<?php echo $newprice?>" name="newprice" required><br>
+
+
                     <label class="col-2">Sale Status:</label>
                     <input class="col-5" type="text" value="<?php echo $newsales?>" name="newsales" required><br>
+
+
                     <label class="col-2">Sale Percentage:</label>
                     <input class="col-5" type="text" value="<?php echo $newsalep?>" name="newsalep" required><br>
+
+
                     <label class="col-2">Description:</label>
                     <input class="col-5" type="text" value="<?php echo $newdescription?>" name="newdescription" required><br>
+
+
                     <label class="col-2">Status:</label>
                     <input class="col-5" type="text" value="<?php echo $newstuatus?>" name="newstuatus" required><br>
+
                     <input type="submit" value="Save" name="saveeditpro">
                 </form>
     </div>
     <div id="adddiv" style="display: <?php echo $display1?>;">
+
                 <form action="?" method="post" enctype="multipart/form-data">
+
                     <label class="col-2">Category ID:</label>
                     <input class="col-5" type="text"  name="newpcatid" required><br>
+
+
                     <label class="col-2">Name:</label>
                     <input class="col-5" type="text" name="newpname" required><br>
+
+
                     <label class="col-2">Price:</label>
                     <input class="col-5" type="text" name="newpprice" required><br>
+
+
                     <label class="col-2">Sale Status:</label>
                     <input class="col-5" type="text" name="newpsales" required><br>
+
+
                     <label class="col-2">Sale Percentage:</label>
                     <input class="col-5" type="text" name="newpsalep" required><br>
+
+
                     <label class="col-2">Description:</label>
                     <input class="col-5" type="text" name="newpdescription" required><br>
+
+
                     <label class="col-2">Image:</label>
                     <input class="col-5" type="file" name="file" id="file" required><br>
+
+
                     <label class="col-2">Status:</label>
                     <input class="col-5" type="text" name="newpstuatus" required><br>
+
                     <input type="submit" value="Add" name="addnewpro">
                 </form>
     </div>
@@ -208,19 +246,25 @@ $resultcheck = mysqli_num_rows($run);
                     <td>'.$row['description'].'</td>
                     <td><img src="'.$row['image'].'"></td>
                     <td>'.$row['status'].'</td>
+
+                    
                     <td>
                     <form method="post">
                     <input type="hidden" value="'.$y.'" name="proid">
                     <input type="submit" value="Edit" name="editpro">
                     </form>
                     </td>
+
+
                     <td>
                     <form method="post">
                     <input type="hidden" value="'.$y.'" name="proid">
                     <input type="submit" value="Delete" name="deletepro">
                     </form>
                     </td>
+
                 </tr>
+
                 ';
                 }
                 }
