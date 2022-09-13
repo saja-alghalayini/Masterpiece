@@ -65,28 +65,6 @@ nav{
    box-shadow: 0 4px 8px 0 #96aadf, 0 6px 20px 0 rgba(198, 63, 219, 0.19);
 }
 
-
-#cat1:hover{
-    animation : bounce 1s;  
-    /* animation : pulse 2s infinite;   to make the animate work for infinte loop   */
-}
-
-
-#cat2:hover{
-    animation : bounce 1s ; 
-}
-
-
-#cat3:hover{
-    animation : bounce 1s ; 
-}
-
-
-#cat4:hover{
-    animation : bounce 1s ; 
-}
-
-
 #cat1{
     background-image: url('../Images/cat-Img.jpg');
     background-repeat: no-repeat;
@@ -115,15 +93,29 @@ nav{
 }
 
 
-h4{
-    height: 70px;
+#cat1:hover{
+    animation : bounce 1s;  
+    /* animation : pulse 2s infinite;   to make the animate work for infinte loop   */
 }
 
 
-#shadow{
-    box-shadow: 0 4px 8px 0 rgba(150, 48, 163, 0.248), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
-    /* justify-content: space-evenly; */
+#cat2:hover{
+    animation : bounce 1s ; 
+}
 
+
+#cat3:hover{
+    animation : bounce 1s ; 
+}
+
+
+#cat4:hover{
+    animation : bounce 1s ; 
+}
+
+
+h4{
+    height: 70px;
 }
 
 
@@ -261,11 +253,16 @@ h4{
 }
 
 
+.shadow{
+    box-shadow: 0 4px 8px 0 rgba(150, 48, 163, 0.248), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+}
+
+
 .col-3 {
     max-width: 30% !important;
-    /* -webkit-box-flex: 0; */
-    /* -ms-flex: 0 0 25%; */
-    /* flex: 0 0 25%; */
+    /* -webkit-box-flex: 0;
+    -ms-flex: 0 0 25%;
+    flex: 0 0 25%; */
 }
 
 

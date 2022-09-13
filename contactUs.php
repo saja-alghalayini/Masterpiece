@@ -27,7 +27,7 @@ if(isset($_POST["submit"])) {
       $homepath= 'landingpage.php?id='.$user_id;
       $shoppath= 'ProductsPage.php?id='.$user_id;
       $categorypath= 'CategoriesPage.php?id='.$user_id.'&';
-      $cartpath= 'other/cart.php?id='.$user_id;
+      $cartpath= 'cart.php?id='.$user_id;
       $about = 'aboutUS.php?id='.$user_id;
       $contact = 'contactUs.php?id='.$user_id;
 

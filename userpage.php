@@ -57,7 +57,7 @@ if(!isset($_GET["id"])){
 }else{
   $shoppath= 'ProductsPage.php?id='.$id;
   $categorypath= 'CategoriesPage.php?id='.$id.'&';
-  $cartpath= 'other/cart.php?id='.$id;
+  $cartpath= 'cart.php?id='.$id;
   $homepath= 'landingpage.php?id='.$id;
   $about= 'aboutUS.php?id='.$id;
   $contact= 'contactUS.php?id='.$id;

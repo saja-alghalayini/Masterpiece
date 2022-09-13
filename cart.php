@@ -1,5 +1,5 @@
 <?php
-include_once '../connect.php';
+include_once 'connect.php';
 session_start();
 $id= $_GET["id"];
 
@@ -61,12 +61,12 @@ if(isset($_POST['checkout'])){
     header("location:checkout.php");
 }
 
-$homepath= '../landingpage.php?id='.$id;
-$shoppath= '../ProductsPage.php?id='.$id;
-$categorypath= '../CategoriesPage.php?id='.$id.'&';
+$homepath= 'landingpage.php?id='.$id;
+$shoppath= 'ProductsPage.php?id='.$id;
+$categorypath= 'CategoriesPage.php?id='.$id.'&';
 $cartpath= '#';
-$about= '../aboutUS.php?id='.$id;
-$contact= '../contactUS.php?id='.$id;
+$about= 'aboutUS.php?id='.$id;
+$contact= 'contactUS.php?id='.$id;
 
 ?>
 
@@ -78,17 +78,17 @@ $contact= '../contactUS.php?id='.$id;
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="cart.css">
+    <link rel="stylesheet" href=".\CSS\cart.css">
     <script src="https://kit.fontawesome.com/0cbb596ed4.js" crossorigin="anonymous"></script>
     <title>Cart</title>
-    <link rel="shortcut icon" href="..\Images\logo.png">
+    <link rel="shortcut icon" href=".\Images\logo.png">
 </head>
 
 <body>
 <nav style="display: flex;">
       
             <div>
-            <img width="110px" src="..\Images\logo.png" style="margin-left: 80%;">
+            <img width="110px" src=".\Images\logo.png" style="margin-left: 80%;">
             </div>
 
             <div>
@@ -134,8 +134,8 @@ $contact= '../contactUS.php?id='.$id;
 
                       
             } else {
-                echo '<a href="../userpage.php?id=' . $id . '">Account</a>';
-                echo '<a href="../LandingPage.php">Log Out</a>';
+                echo '<a href="userpage.php?id=' . $id . '">Account</a>';
+                echo '<a href="LandingPage.php">Log Out</a>';
             }
 
             if (isset($_GET["id"])) {
@@ -184,13 +184,17 @@ $contact= '../contactUS.php?id='.$id;
                         };
 
                     echo '<form action="" method="get"><tr>
+
                     <td style="position: relative;">
+                    
                         <div style="left: 0; margin: auto; display: flex; justify-content: space-around; align-items: center; width: 200px;">
                             <a href="cart.php?id='.$id.'&del_pro='.$row['id'].'"><i style="position: absolute; left: 10px; color:#7997c5" class="fa-solid fa-square-xmark"></i></a>
-                            <img src=".'.$row['image'].'" width="50px" alt="">
+                            <img src="'. $row['image'] .'" width="50px" alt="">
                             <span>'.$row['name'].'</span>
                         </div>
                     </td>
+
+
                     <td>$'.$row['price'].'</td>
                     <td>
                         <input type="hidden" value="'.$row['product_id'].'" name="product_id'.$i.'">
@@ -198,6 +202,7 @@ $contact= '../contactUS.php?id='.$id;
                     </td>
                     <td>$'.($row['price']*$row['quantity']).'</td>
                     </tr>';
+                    
                     $quantity[] = $row['quantity'];
 
                     $sum+= ($row['price']*$row['quantity']);
@@ -217,6 +222,7 @@ $contact= '../contactUS.php?id='.$id;
                     </form>
                 </table>
 
+
                 <div class="total">
                     <h3 style='color:#653B88'>Total Payment: <?php echo $sum; ?> JD</h3>
                     <form method="post">
@@ -231,7 +237,7 @@ $contact= '../contactUS.php?id='.$id;
     <footer>
         <div id="footerdiv">
             <div class="col-3">
-                <img src="../Images/logo.png">
+                <img src="./Images/logo.png">
             </div>
             <div class="col-3">
                 <h1 style="text-align: center;">Stay In Touch</h1><br>

@@ -1,5 +1,5 @@
 <?php
-include_once '../connect.php';
+include_once 'connect.php';
 session_start();
 
 $total = $_SESSION["total"];
@@ -42,17 +42,17 @@ if (isset($_GET["submit"])) {
     $query5 = mysqli_query($conn, $sql5);
     echo "<script language='javascript'>
 setTimeout(() => {
-    window.location.href = '../landingpage.php?id=$id'; 
+    window.location.href = 'landingpage.php?id=$id'; 
  }, 7000);
 </script>";
 }
 
-$homepath = '../landingpage.php?id=' . $id;
-$shoppath = '../ProductsPage.php?id=' . $id;
+$homepath = 'landingpage.php?id=' . $id;
+$shoppath = 'ProductsPage.php?id=' . $id;
 $categorypath = 'CategoriesPage.php?id=' . $id . '&';
 $cartpath = 'cart.php?id=' . $id;
-$about = '../aboutUS.php?id=' . $id;
-$contact = '../contactUS.php?id=' . $id;
+$about = 'aboutUS.php?id=' . $id;
+$contact = 'contactUS.php?id=' . $id;
 
 $sql6 = "SELECT * FROM user WHERE user_id=$id;";
 $result6 = mysqli_query($conn, $sql6);
@@ -80,23 +80,23 @@ if ($result6->num_rows > 0) {
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="checkout.css">
+    <link rel="stylesheet" href="./CSS/checkout.css">
     <script src="https://kit.fontawesome.com/aca8d5a1fa.js" crossorigin="anonymous"></script>
     <title>Check Out</title>
-    <link rel="shortcut icon" href="..\Images\logo.png">
+    <link rel="shortcut icon" href=".\Images\logo.png">
 </head>
 
 <body>
     <div class="pop" style="display: <?php echo $non; ?>;">
         <div class="mess">
-            Your Order Was Successfully Placed Thank You For Buying From Multicolor, and for supporting our local artists.
+            Your Order Was Successfully Placed Thank You For Buying From Multicolor, and for supporting our artists.
         </div>
     </div>
     <!-- <img src="../Images/categories background1.jpg" alt=""> -->
     <nav style="display: flex;">
       
     <div>
-            <img width="110px" src="..\Images\logo.png" style="margin-left: 80%;">
+            <img width="110px" src=".\Images\logo.png" style="margin-left: 80%;">
             </div>
 
       <div style="font-family: 'Times New Roman', Times, serif;">
@@ -110,13 +110,10 @@ if ($result6->num_rows > 0) {
       <div>
         <?php
         echo '<a href="'.$cartpath.'"><i class="fa-solid fa-cart-shopping"></i></a>';
-        // if(!isset($_GET["id"])){
-        //   echo '<a href="login.php">Login</a>
-        //         <a href="signup.php">Register</a>';
-        // }else{
-          echo '<a href="../userpage.php?id='.$_SESSION["id"].'">Account</a>';
-          echo '<a href="../LandingPage.php">Log Out</a>';
-        // }
+        
+          echo '<a href="userpage.php?id='.$_SESSION["id"].'">Account</a>';
+          echo '<a href="LandingPage.php">Log Out</a>';
+        
 
         if(isset($_GET["id"])){
           $id= $_GET["id"];
@@ -132,6 +129,7 @@ if ($result6->num_rows > 0) {
             <h1 class="Thead" style='color:#653B88;'>CheckOut</h1>
 
             <div class="parent">
+
 <!-- -------------------------------Side 1 Start----------------------------- -->
 
                 <div class="side1">
@@ -243,7 +241,7 @@ if ($result6->num_rows > 0) {
     <footer>
         <div id="footerdiv">
             <div class="col-3">
-            <img src="../Images/logo.png">
+            <img src="./Images/logo.png">
             </div>
             <div class="col-3">
                 <h1 style="text-align: center;">Stay In Touch</h1><br>

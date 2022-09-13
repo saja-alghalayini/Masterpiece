@@ -17,7 +17,7 @@ if (!isset($_GET["id"])) {
   $homepath = 'landingpage.php?id=' . $user_id;
   $shoppath = 'ProductsPage.php?id=' . $user_id;
   $categorypath = 'CategoriesPage.php?id=' . $user_id . '&';
-  $cartpath = 'other/cart.php?id=' . $user_id;
+  $cartpath = 'cart.php?id=' . $user_id;
   $about = 'aboutUS.php?id=' . $user_id;
   $contact = 'contactUs.php?id=' . $user_id;
 
@@ -60,6 +60,7 @@ $pop='';
   <!-- CSS only -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
   <script src="https://kit.fontawesome.com/7b836f378e.js" crossorigin="anonymous"></script>
+  <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
   <link rel="stylesheet" href="./CSS/aboutUs.css">
   
 </head>
@@ -109,75 +110,86 @@ $pop='';
         </nav>
 
 
-  <div class="container">
+        <div class="container">
     <div class="row align-items-center">
-      <div class="col-lg-6 col-md-6 order-2 order-md-1 mt-4 pt-2 mt-sm-0 opt-sm-0">
-        <div class="row align-items-center">
-          <div class="col-lg-6 col-md-6 col-6">
-            <div class="row">
-              <div class="col-lg-12 col-md-12 mt-4 pt-2">
-                <div class="card work-desk rounded border-0 shadow-lg overflow-hidden">
-                  <img src="./img/ourteam1.jpg" class="img-fluid" alt="Image" />
-                  <div class="img-overlay bg-dark"></div>
-                </div>
-              </div>
-              <!--end col-->
+        <div class="col-lg-6 col-md-6 order-2 order-md-1 mt-4 pt-2 mt-sm-0 opt-sm-0">
+            <div class="row align-items-center">
+                <div class="col-lg-6 col-md-6 col-6">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12 mt-4 pt-2">
+                            <div class="card work-desk rounded border-0 shadow-lg overflow-hidden">
+                                <img src="./img/ourteam1.jpg" class="img-fluid" alt="Image" />
+                                <div class="img-overlay bg-dark"></div>
+                            </div>
+                        </div>
+                        <!--end col-->
 
+                        <div class="col-12">
+                            <div class="mt-4 pt-2 text-right">
+                                
+                            </div>
+                        </div>
+                    </div>
+                    <!--end row-->
+                </div>
+                <!--end col-->
+
+                <div class="col-lg-6 col-md-6 col-6">
+                    <div class="row">
+                        <div class="col-lg-12 col-md-12">
+                            <div class="card work-desk rounded border-0 shadow-lg overflow-hidden">
+                                <img src="./img/ourteam3.jpg" class="img-fluid" alt="Image" />
+                                <div class="img-overlay bg-dark"></div>
+                            </div>
+                        </div>
+                        <!--end col-->
+
+                        <div class="col-lg-12 col-md-12 mt-4 pt-2">
+                            <div class="card work-desk rounded border-0 shadow-lg overflow-hidden">
+                                <img src="./img/ourteam2.jpg" class="img-fluid" alt="Image" />
+                                <div class="img-overlay bg-dark"></div>
+                            </div>
+                        </div>
+                        <!--end col-->
+                    </div>
+                    <!--end row-->
+                </div>
+                <!--end col-->
             </div>
             <!--end row-->
-
-          </div>
-          <!--end col-->
-
-
-          <div class="col-lg-6 col-md-6 col-6">
-            <div class="row">
-              <div class="col-lg-12 col-md-12">
-                <div class="card work-desk rounded border-0 shadow-lg overflow-hidden">
-                  <img src="./img/ourteam3.jpg" class="img-fluid" alt="Image" />
-                  <div class="img-overlay bg-dark"></div>
-                </div>
-              </div>
-              <!--end col-->
-
-              <div class="col-lg-12 col-md-12 mt-4 pt-2">
-                <div class="card work-desk rounded border-0 shadow-lg overflow-hidden">
-                  <img src="./img/ourteam2.jpg" class="img-fluid" alt="Image" />
-                  <div class="img-overlay bg-dark"></div>
-                </div>
-              </div>
-              <!--end col-->
-
-            </div>
-            <!--end row-->
-
-          </div>
-          <!--end col-->
-
         </div>
-        <!--end row-->
+        <!--end col-->
 
-      </div>
-      <!--end col-->
 
       <div class="col-lg-6 col-md-6 col-12 order-1 order-md-2">
         <div class="section-title ml-lg-5">
-          <h5 class="text-custom font-weight-normal mb-3 ">Our Story </h5>
+         
           <h4 class="title mb-4 display-4 "><span class="custom"> Multi</span> color </h4>
           <p class="text-muted mb-0 cus">I'm a full stack web developer who's intrested in art,
              I have developed this website to help people who loves art, 
              and to help the artiest to market themselves throughout this website.
              <br>You can check our fabulous Artest work in our shop and don't forget to see our categories as well
              </p>
-
-          <a href="<?php echo $homepath; ?>" style="display: block;" class="butt">Explor</a>
         </div>
       </div>
       <!--end col-->
     </div>
     <!--enr row-->
 
+<!-- Start Features Section -->
 
+
+        
+      <section id="features">
+  
+    <div class="feature-cards">
+      <div class="feature-item"><i class="fa-solid fa-truck-fast feature-icon" style="font-size: 60px;"></i><h5 style="margin-top: 13px; color: #15778d;">Fast Shipping</h5></div>
+      <div class="feature-item"><i class="fa-sharp fa-solid fa-ranking-star feature-icon" style="font-size: 60px;"></i><h5 style="margin-top: 13px; color: #15778d;">Best Quality</h5></div>  
+      <div class="feature-item"><i class="fas fa-4x fa-check feature-icon" style="font-size: 60px;"></i></i><h5 style="margin-top: 13px; color: #15778d;">Start stitching</h5></div>
+
+  </section>
+
+<!-- End Feature Section -->
 
 
     <div class=" py-5 flx">

@@ -4,7 +4,7 @@ include_once 'connect.php';
 if (isset($_GET["id"])) {
     $id = $_GET["id"];
     $loginpath = "&id=" . $id;
-    $cart = "other/cart.php?id=$id";
+    $cart = "cart.php?id=$id";
 } else {
     $loginpath = "";
     $cart = "login.php";
@@ -43,7 +43,7 @@ if (!isset($_GET["id"])) {
 } else {
     $shoppath = 'ProductsPage.php?id=' . $user_id;
     $categorypath = 'CategoriesPage.php?id=' . $user_id . '&';
-    $cartpath = 'other/cart.php?id=' . $user_id;
+    $cartpath = 'cart.php?id=' . $user_id;
     $homepath = 'landingpage.php?id=' . $user_id;
     $about = 'aboutUS.php?id=' . $user_id;
     $contact = 'contactUS.php?id=' . $user_id;
