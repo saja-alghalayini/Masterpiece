@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once('connect.php');
+include_once('.\Connection\connect.php');
 
 if (isset($_POST['submit'])){
     $Email =$_POST['email'];

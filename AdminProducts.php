@@ -1,5 +1,5 @@
 <?php
-include_once 'connect.php';
+include_once '.\Connection\connect.php';
 
 $display= "none";
 $display1= "none";

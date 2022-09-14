@@ -1,5 +1,5 @@
 <?php
-include_once 'connect.php';
+include_once '.\Connection\connect.php';
 session_start();
 
 $total = $_SESSION["total"];

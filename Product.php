@@ -1,5 +1,5 @@
 <?php
-include_once 'connect.php';
+include_once '.\Connection\connect.php';
 $pro_id = $_GET["pro_id"];
 if (isset($_GET["id"])) {
     $id = $_GET["id"];

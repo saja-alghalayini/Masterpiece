@@ -1,6 +1,6 @@
 <?php
 
-include_once 'connect.php';
+include_once '.\Connection\connect.php';
 if(isset($_GET["id"])){
   $user_id= $_GET["id"];
 }
