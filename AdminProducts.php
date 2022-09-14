@@ -4,18 +4,20 @@ include_once 'connect.php';
 $display= "none";
 $display1= "none";
 
+// --------------- //
 if(isset($_POST["deletepro"])){
     $pro_id= $_POST["proid"];
     $deletingdata= "DELETE FROM products WHERE id=$pro_id;";
     mysqli_query($conn , $deletingdata);
 }
 
-// 
+// --------------- //
 if(isset($_POST["editpro"])){
     $pro_id= $_POST["proid"];
     $sql1 = "SELECT * FROM products WHERE id='$pro_id';";
     $result1 = mysqli_query($conn,$sql1);
     $resultcheck1 = mysqli_num_rows($result1);
+
     if($resultcheck1 > 0)
     {
         while($row2 = mysqli_fetch_assoc($result1))
@@ -31,6 +33,7 @@ if(isset($_POST["editpro"])){
     $display= 'block';
 }
 
+// --------------- //
 if(isset($_POST["saveeditpro"])){
     $pro_id= $_POST["proid"];
     $newcatid= $_POST["newcatid"];
@@ -47,6 +50,7 @@ if(isset($_POST["saveeditpro"])){
     $display= 'none';
 }
 
+// --------------- //
 if(isset($_POST["saveimg"])){
     $pro_id= $_POST["proid"];
 
@@ -55,18 +59,19 @@ if(isset($_POST["saveimg"])){
     $file_size = $_FILES["file"]["size"];
     $file_tem = $_FILES["file"]["tmp_name"];
     $file_store = "./Images/ProductsImages/".$file_name;
-    // echo $file_store;
+
     move_uploaded_file($file_tem, $file_store);
 
     $sql2= "UPDATE products SET image='$file_store'  WHERE id=$pro_id;";
     mysqli_query($conn , $sql2);
 }
-// 
+
 
 if(isset($_POST["adding"])){
     $display1= "block";
 }
 
+// --------------- //
 if(isset($_POST["addnewpro"])){
     $newpcatid= $_POST["newpcatid"];
     $newpname= $_POST["newpname"];
@@ -81,7 +86,7 @@ if(isset($_POST["addnewpro"])){
     $file_size = $_FILES["file"]["size"];
     $file_tem = $_FILES["file"]["tmp_name"];
     $file_store = "./Images/ProductsImages/".$file_name;
-    // echo $file_store;
+
     move_uploaded_file($file_tem, $file_store);
 
     $adding_pro= "INSERT INTO products(category_id, name, price, sale_status, sale_pre, description, image, status)
