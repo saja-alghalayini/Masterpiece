@@ -4,7 +4,7 @@ include_once 'connect.php';
 if(isset($_GET["id"])){
   $user_id= $_GET["id"];
 }
-$imgsrc="./img/userpic.png";
+$imgsrc="./Images/userpic.png";
 
 if(isset($_POST['saveimg'])){
   $file_name = $_FILES["file"]["name"];

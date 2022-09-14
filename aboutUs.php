@@ -118,7 +118,7 @@ $pop='';
                     <div class="row">
                         <div class="col-lg-12 col-md-12 mt-4 pt-2">
                             <div class="card work-desk rounded border-0 shadow-lg overflow-hidden">
-                                <img src="./img/ourteam1.jpg" class="img-fluid" alt="Image" />
+                                <img src="./Images/ourteam1.jpg" class="img-fluid" alt="Image" />
                                 <div class="img-overlay bg-dark"></div>
                             </div>
                         </div>
@@ -138,7 +138,7 @@ $pop='';
                     <div class="row">
                         <div class="col-lg-12 col-md-12">
                             <div class="card work-desk rounded border-0 shadow-lg overflow-hidden">
-                                <img src="./img/ourteam3.jpg" class="img-fluid" alt="Image" />
+                                <img src="./Images/ourteam3.jpg" class="img-fluid" alt="Image" />
                                 <div class="img-overlay bg-dark"></div>
                             </div>
                         </div>
@@ -146,7 +146,7 @@ $pop='';
 
                         <div class="col-lg-12 col-md-12 mt-4 pt-2">
                             <div class="card work-desk rounded border-0 shadow-lg overflow-hidden">
-                                <img src="./img/ourteam2.jpg" class="img-fluid" alt="Image" />
+                                <img src="./Images/ourteam2.jpg" class="img-fluid" alt="Image" />
                                 <div class="img-overlay bg-dark"></div>
                             </div>
                         </div>
@@ -208,7 +208,7 @@ $pop='';
           
             <!-- Team item-->
             <div class="col-xl-4 col-sm-6 mb-5">
-              <div class="bg-white rounded shadow-sm py-5 px-4 "><img src=".\img\Saja.png" alt=""  width="175" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-bg">
+              <div class="bg-white rounded shadow-sm py-5 px-4 "><img src=".\Images\Saja.png" alt=""  width="175" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-bg">
                 <h4 class="mb-0"> Saja Al Ghalayini </h4> <span class="small text-uppercase text-muted">Project Owner <br> Full Stack Web Developer</span>
                 <ul class="social mb-0 list-inline mt-3">
                   <li class="list-inline-item"><a href="https://www.facebook.com/Saja.AlGhalayini" target="_blank" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
