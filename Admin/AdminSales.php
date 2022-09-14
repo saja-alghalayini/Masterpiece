@@ -1,5 +1,5 @@
 <?php
-include_once '../connect.php';
+include_once '../Connection/connect.php';
 
 
 $query= "SELECT * FROM `order` INNER JOIN bill ON `order`.bill_id=bill.id INNER JOIN products ON `order`.product_id=products.id;";

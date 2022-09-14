@@ -1,5 +1,5 @@
 <?php
-include_once '.\Connection\connect.php';
+include_once '..\Connection\connect.php';
 if(isset($_POST["submit"])) {
     $name = $_POST["userName"];
     $email = $_POST["userEmail"];
@@ -16,20 +16,21 @@ if(isset($_POST["submit"])) {
       $user_id= $_GET["id"];
     }
     if(!isset($_GET["id"])){
-      $homepath= 'landingpage.php';
-      $shoppath= 'ProductsPage.php';
-      $categorypath= 'CategoriesPage.php?';
-      $cartpath= 'login.php';
-      $about = 'aboutUS.php';
-      $contact = 'contactUs.php';
+      $homepath= ' landingpage.php';
+      $shoppath= ' ProductsPage.php';
+      $categorypath= ' CategoriesPage.php?';
+      $cartpath= ' login.php';
+      $about = ' aboutUS.php';
+      $contact = ' contactUs.php';
       $pop="";
+
     }else{
-      $homepath= 'landingpage.php?id='.$user_id;
-      $shoppath= 'ProductsPage.php?id='.$user_id;
-      $categorypath= 'CategoriesPage.php?id='.$user_id.'&';
-      $cartpath= 'cart.php?id='.$user_id;
-      $about = 'aboutUS.php?id='.$user_id;
-      $contact = 'contactUs.php?id='.$user_id;
+      $homepath= ' landingpage.php?id='.$user_id;
+      $shoppath= ' ProductsPage.php?id='.$user_id;
+      $categorypath= ' CategoriesPage.php?id='.$user_id.'&';
+      $cartpath= ' cart.php?id='.$user_id;
+      $about = ' aboutUS.php?id='.$user_id;
+      $contact = ' contactUs.php?id='.$user_id;
 
       /* ------------------------------------------------------------------- */
 $querypop="SELECT * FROM cart INNER JOIN products WHERE cart.product_id=products.id  AND user_id=$user_id;";
@@ -52,7 +53,6 @@ $pop='<div class="sub">'.$numeric.'</div>';
 }else{
 $pop='';
 }
-/* -------------------------------------------------------------------------- */
 
     }
 ?>
@@ -66,8 +66,8 @@ $pop='';
     <title> Contact Us page </title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/7b836f378e.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./CSS/contactUs.css">
-    <link rel="shortcut icon" href=".\Images\logo.png">
+    <link rel="stylesheet" href="../CSS/contactUs.css">
+    <link rel="shortcut icon" href="..\Images\logo.png">
 </head>
 
 
@@ -76,7 +76,7 @@ $pop='';
 <nav style="display: flex;">
       
             <div>
-            <img width="110px" src=".\Images\logo.png" style="margin-left: 80%;">
+            <img width="110px" src="..\Images\logo.png" style="margin-left: 80%;">
             </div>
 
             <div>
@@ -93,12 +93,12 @@ $pop='';
               '.$pop.'<i class="fa fa-shopping-cart" aria-hidden="true"></i></a>';
 
               if(!isset($_GET["id"])){
-                echo '<a href="login.php">Login</a>
-                      <a href="signup.php">Register</a>';
+                echo '<a href=" login.php">Login</a>
+                      <a href=" signup.php">Register</a>';
 
               }else{
-                echo '<a href="userpage.php?id='.$user_id.'">Account</a>';
-                echo '<a href="LandingPage.php">Log Out</a>';
+                echo '<a href=" userpage.php?id='.$user_id.'">Account</a>';
+                echo '<a href=" LandingPage.php">Log Out</a>';
               }
 
               if(isset($_GET["id"])){
@@ -176,7 +176,7 @@ $pop='';
       <footer>
     <div id="footerdiv">
         <div class="col-3">
-            <img src="./Images/logo.png">
+            <img src="../Images/logo.png">
         </div>
         <div class="col-3">
             <h1 style="text-align: center;">Stay In Touch</h1><br>

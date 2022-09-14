@@ -1,17 +1,17 @@
 <?php
 
-include_once '.\Connection\connect.php';
+include_once '..\Connection\connect.php';
 if(isset($_GET["id"])){
   $user_id= $_GET["id"];
 }
-$imgsrc="./Images/userpic.png";
+$imgsrc="../Images/userpic.png";
 
 if(isset($_POST['saveimg'])){
   $file_name = $_FILES["file"]["name"];
   $file_type = $_FILES["file"]["type"];
   $file_size = $_FILES["file"]["size"];
   $file_tem = $_FILES["file"]["tmp_name"];
-  $file_store = "./Images/usersImages/".$file_name;
+  $file_store = "../Images/usersImages/".$file_name;
   move_uploaded_file($file_tem, $file_store);
 
   $imgsql="UPDATE user SET user_img='$file_store' WHERE user_id=$user_id";
@@ -48,19 +48,19 @@ if(isset($_GET['id'])){
   $id= $_GET['id'];
 }
 if(!isset($_GET["id"])){
-  $shoppath= 'ProductsPage.php';
-  $categorypath= 'CategoriesPage.php?';
-  $cartpath= 'login.php';
-  $homepath= 'landingpage.php';
-  $about= 'aboutUS.php';
-  $contact= 'contactUS.php';
+  $shoppath= ' ProductsPage.php';
+  $categorypath= ' CategoriesPage.php?';
+  $cartpath= ' login.php';
+  $homepath= ' landingpage.php';
+  $about= ' aboutUS.php';
+  $contact= ' contactUS.php';
 }else{
-  $shoppath= 'ProductsPage.php?id='.$id;
-  $categorypath= 'CategoriesPage.php?id='.$id.'&';
-  $cartpath= 'cart.php?id='.$id;
-  $homepath= 'landingpage.php?id='.$id;
-  $about= 'aboutUS.php?id='.$id;
-  $contact= 'contactUS.php?id='.$id;
+  $shoppath= ' ProductsPage.php?id='.$id;
+  $categorypath= ' CategoriesPage.php?id='.$id.'&';
+  $cartpath= ' cart.php?id='.$id;
+  $homepath= ' landingpage.php?id='.$id;
+  $about= ' aboutUS.php?id='.$id;
+  $contact= ' contactUS.php?id='.$id;
 }
 
 
@@ -95,9 +95,9 @@ $pop='';
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
     <script src="https://kit.fontawesome.com/7b836f378e.js" crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="./CSS/userPage.css">
+    <link rel="stylesheet" href="../CSS/userPage.css">
     <title>Ueser Page</title>
-    <link rel="shortcut icon" href=".\Images\logo.png">
+    <link rel="shortcut icon" href="..\Images\logo.png">
 
     <style>
 
@@ -155,7 +155,7 @@ footer img {
 <nav style="display: flex;">
       
             <div>
-                <img width="110px" src=".\Images\logo.png" style="margin-left: 80%;">
+                <img width="110px" src="..\Images\logo.png" style="margin-left: 80%;">
             </div>
 
             <div>
@@ -171,12 +171,12 @@ footer img {
               '.$pop.'<i class="fa fa-shopping-cart" aria-hidden="true"></i></a>';
 
               if(!isset($_GET["id"])){
-                echo '<a href="login.php">Login</a>
-                      <a href="signup.php">Register</a>';
+                echo '<a href=" login.php">Login</a>
+                      <a href=" signup.php">Register</a>';
 
               }else{
-                echo '<a href="userpage.php?id=' .$user_id.'">Account</a>';
-                echo '<a href="LandingPage.php"> Log Out </a>';
+                echo '<a href=" userpage.php?id=' .$user_id.'">Account</a>';
+                echo '<a href=" LandingPage.php"> Log Out </a>';
               }
 
               if(isset($_GET["id"])){
@@ -194,16 +194,20 @@ footer img {
         <section class="vh-100">
         <div class="container py-5 h-100">
           <div class="row d-flex justify-content-center align-items-center h-100">
+
           <?php
+
               if(isset($_POST['editinfo'])){
               echo '
               <div class="container" style="text-align:center;">
+
               <form method="post">
               <input type="text" value="'.$info['first_name'].'" name="newfirstname">
               <input type="text" value="'.$info['last_name'].'" name="newlastname">
               <input type="text" value="'.$info['email'].'" name="newemail">
               <input type="text" value="'.$info['mobile'].'" name="newmobile">
               <input type="submit" value="Save Changes" name="newinfo" class="btn btn-primary">
+
               </form>
               </div>';
             }
@@ -211,10 +215,12 @@ footer img {
             if(isset($_POST['changepass'])){
               echo '
               <div class="container" style="text-align:center;">
+
               <form method="post">
               <input type="password" name="oldpass" placeholder="Enter Old Password">
               <input type="password" name="newpass" placeholder="Enter New Password">
               <input type="submit" value="Save Changes" name="newpassbtn" class="btn btn-primary">
+
               </form>
               </div>';
             }
@@ -235,10 +241,12 @@ footer img {
             if(isset($_GET["chimg"])){
               echo '
               <div class="container" style="text-align:center;">
+
               <form action="?id='.$user_id.'" method="post" enctype="multipart/form-data">
                   <label>Upload Image:</label>
                   <input type="file" name="file" id="file" required>
                   <input type="submit" value="Change Image" name="saveimg" class="btn btn-primary">
+
               </form>
               </div>';
             }
@@ -246,6 +254,7 @@ footer img {
             <div class="col col-lg-6 mb-4 mb-lg-0">
               <div class="card mb-3" style="border-radius: .5rem;">
                 <div class="row g-0" >
+                  
                   <div class="col-md-4 gradient-custom text-center text-white"
                     style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
 
@@ -259,26 +268,37 @@ footer img {
                       <form method="post">
                         <button type="submit" name="editinfo" id="editinfo"><i class="far fa-edit mb-5"></i></button>
                       </form>
+                      
                     </div>
                   </div>
+
+
+                  
                   <div class="col-md-8">
                     <div class="card-body p-4">
+
                       <h6>Information</h6>
                       <hr class="mt-0 mb-4">
                       <div class="row pt-1">
                         <div class="col-6 mb-3">
+
                           <h6>Email</h6>
                           <p class="text-muted" id="text1"><?php echo $info['email']?></p>
                         </div>
+
+
                         <div class="col-6 mb-3">
                           <h6>Phone</h6>
                           <p class="text-muted"><?php echo $info['mobile']?></p>
                         </div>
                       </div>
+
+
                       <h6>Password</h6>
                       <hr class="mt-0 mb-4">
                       <form method='post'>
                       <input type="submit" class="btn" value="Change Password" name="changepass">
+
                       </form>
                       
                     </div>
@@ -294,7 +314,7 @@ footer img {
       <footer>
         <div id="footerdiv">
             <div class="col-3">
-                <img src="./Images/logo.png">
+                <img src="../Images/logo.png">
             </div>
             <div class="col-3">
                 <h1 style="text-align: center;">Stay In Touch</h1><br>

@@ -1,6 +1,6 @@
 <?php
 session_start();
-include_once('.\Connection\connect.php');
+include_once('..\Connection\connect.php');
 
 if (isset($_POST['submit'])){
     $Email =$_POST['email'];
@@ -17,17 +17,18 @@ if (isset($_POST['submit'])){
           if($Email== ($row['email'])&& $Password== $row['pass'] && $row['is_admin']==0){
           
 
-            header('location:LandingPage.php?id='.$row["user_id"].'');
+            header('location:  LandingPage.php?id='.$row["user_id"].'');
 
           }else {
            
                   $wrong1= '<style type="text/css">
-                  #i11, #one1{
+                  #inv11, #inv1{
                       display: inline;
                   }
                   </style>';
+
                   $wrong2= '<style type="text/css">
-                  #i22, #two2{
+                  #inv2, #inv22{
                       display: inline;
                   }
                   </style>';
@@ -43,12 +44,12 @@ if (isset($_POST['submit'])){
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
   <script src="https://kit.fontawesome.com/7b836f378e.js" crossorigin="anonymous"></script>
-  <link rel="stylesheet" href="./CSS/login.css">
+  <link rel="stylesheet" href="../CSS/login.css">
   <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
   <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
   
   <title> Sign In </title>
-  <link rel="shortcut icon" href=".\Images\logo.png">
+  <link rel="shortcut icon" href="..\Images\logo.png">
 
 
   
@@ -56,15 +57,15 @@ if (isset($_POST['submit'])){
 <body>
 <nav>
       <div>
-        <img width="100px" src=".\Images\logo.png" style="margin-left: 80%;">
+        <img width="100px" src="..\Images\logo.png" style="margin-left: 80%;">
       </div>
 
 
         <div class="tab1">
-            <a href="landingpage.php">HOME</a>
-            <a href="ProductsPage.php">PRODUCTS</a>
-            <a href="contactUS.php">CONTACT US</a>
-            <a href="aboutUS.php">ABOUT US</a>
+            <a href=" landingpage.php">HOME</a>
+            <a href=" ProductsPage.php">PRODUCTS</a>
+            <a href=" contactUS.php">CONTACT US</a>
+            <a href=" aboutUS.php">ABOUT US</a>
         </div>
 
 
@@ -93,15 +94,17 @@ if (isset($_POST['submit'])){
             <div class="field-group">
               <label for="Email">Email Address</label><br>
               <input name='email' id="Email" value="" type="email"  required="true">
-              <img src="./img/icon-error (1).svg" class="error-icon" alt="" id='i11'>
-              <p class="error-text" id='one1'>Invalid email</p>
+              <img src="../img/icon-error (1).svg" class="error-icon" alt="" id='inv11'>
+              <p class="error-text" id='inv1'>Invalid email</p>
               <?php if(isset($wrong1)){echo $wrong1;}?>               
             </div>
+
+
             <div class="field-group">
               <label for="password">Password </label><br>
               <input name='Password' id="password" value="" type="password"  required="true">
-              <img src="./img/icon-error (1).svg" class="error-icon" alt="" id='i22'>
-              <p class="error-text" id='two2'>wrong password</p> 
+              <img src="../img/icon-error (1).svg" class="error-icon" alt="" id='inv2'>
+              <p class="error-text" id='inv22'>wrong password</p> 
               
               <?php if(isset($wrong2)){echo $wrong2;}?>              
             </div>
@@ -118,7 +121,7 @@ if (isset($_POST['submit'])){
   <footer>
     <div id="footerdiv">
         <div class="col-3">
-            <img src="./Images/logo.png">
+            <img src="../Images/logo.png">
         </div>
         <div class="col-3">
             <h1 style="text-align: center; margin-top:0; color:white;">Stay In Touch</h1><br>

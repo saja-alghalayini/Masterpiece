@@ -1,5 +1,5 @@
 <?php
-include_once '.\Connection\connect.php';
+include_once '..\Connection\connect.php';
 
 if (isset($_GET["id"])) {
   $user_id = $_GET["id"];
@@ -55,13 +55,13 @@ $pop='';
   <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us</title>
-  <link rel="shortcut icon" href=".\Images\logo.png">
+  <link rel="shortcut icon" href="..\Images\logo.png">
 
   <!-- CSS only -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-0evHe/X+R7YkIZDRvuzKMRqM+OrBnVFBL6DOitfPri4tjfHxaWutUpFmBp4vmVor" crossorigin="anonymous">
   <script src="https://kit.fontawesome.com/7b836f378e.js" crossorigin="anonymous"></script>
   <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
-  <link rel="stylesheet" href="./CSS/aboutUs.css">
+  <link rel="stylesheet" href="../CSS/aboutUs.css">
   
 </head>
 
@@ -70,7 +70,7 @@ $pop='';
 <nav style="display: flex;">
       
             <div>
-            <img width="110px" src=".\Images\logo.png" style="margin-left: 80%;">
+            <img width="110px" src="..\Images\logo.png" style="margin-left: 80%;">
             </div>
 
             <div>
@@ -87,12 +87,12 @@ $pop='';
               '.$pop.'<i class="fa fa-shopping-cart" aria-hidden="true"></i></a>';
 
               if(!isset($_GET["id"])){
-                echo '<a href="login.php">Login</a>
-                      <a href="signup.php">Register</a>';
+                echo '<a href=" login.php">Login</a>
+                      <a href=" signup.php">Register</a>';
 
               }else{
-                echo '<a href="userpage.php?id='.$user_id.'">Account</a>';
-                echo '<a href="LandingPage.php">Log Out</a>';
+                echo '<a href=" userpage.php?id='.$user_id.'">Account</a>';
+                echo '<a href=" LandingPage.php">Log Out</a>';
               }
 
               if(isset($_GET["id"])){
@@ -118,7 +118,7 @@ $pop='';
                     <div class="row">
                         <div class="col-lg-12 col-md-12 mt-4 pt-2">
                             <div class="card work-desk rounded border-0 shadow-lg overflow-hidden">
-                                <img src="./Images/ourteam1.jpg" class="img-fluid" alt="Image" />
+                                <img src="../Images/ourteam1.jpg" class="img-fluid" alt="Image" />
                                 <div class="img-overlay bg-dark"></div>
                             </div>
                         </div>
@@ -138,7 +138,7 @@ $pop='';
                     <div class="row">
                         <div class="col-lg-12 col-md-12">
                             <div class="card work-desk rounded border-0 shadow-lg overflow-hidden">
-                                <img src="./Images/ourteam3.jpg" class="img-fluid" alt="Image" />
+                                <img src="../Images/ourteam3.jpg" class="img-fluid" alt="Image" />
                                 <div class="img-overlay bg-dark"></div>
                             </div>
                         </div>
@@ -146,7 +146,7 @@ $pop='';
 
                         <div class="col-lg-12 col-md-12 mt-4 pt-2">
                             <div class="card work-desk rounded border-0 shadow-lg overflow-hidden">
-                                <img src="./Images/ourteam2.jpg" class="img-fluid" alt="Image" />
+                                <img src="../Images/ourteam2.jpg" class="img-fluid" alt="Image" />
                                 <div class="img-overlay bg-dark"></div>
                             </div>
                         </div>
@@ -208,7 +208,7 @@ $pop='';
           
             <!-- Team item-->
             <div class="col-xl-4 col-sm-6 mb-5">
-              <div class="bg-white rounded shadow-sm py-5 px-4 "><img src=".\Images\Saja.png" alt=""  width="175" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-bg">
+              <div class="bg-white rounded shadow-sm py-5 px-4 "><img src="..\Images\Saja.png" alt=""  width="175" class="img-fluid rounded-circle mb-3 img-thumbnail shadow-bg">
                 <h4 class="mb-0"> Saja Al Ghalayini </h4> <span class="small text-uppercase text-muted">Project Owner <br> Full Stack Web Developer</span>
                 <ul class="social mb-0 list-inline mt-3">
                   <li class="list-inline-item"><a href="https://www.facebook.com/Saja.AlGhalayini" target="_blank" class="social-link"><i class="fa fa-facebook-f"></i></a></li>
@@ -231,7 +231,7 @@ $pop='';
   <footer>
     <div id="footerdiv">
         <div class="col-3">
-            <img src="./Images/logo.png">
+            <img src="../Images/logo.png">
         </div>
         <div class="col-3">
             <h1 style="text-align: center;">Stay In Touch</h1><br>

@@ -1,5 +1,5 @@
 <?php
-include_once '.\Connection\connect.php';
+include_once '..\Connection\connect.php';
 session_start();
 $id= $_GET["id"];
 
@@ -58,15 +58,15 @@ $result= mysqli_query($conn, $query);
 $resultcheck = mysqli_num_rows($result);
                     
 if(isset($_POST['checkout'])){
-    header("location:checkout.php");
+    header("location:  checkout.php");
 }
 
-$homepath= 'landingpage.php?id='.$id;
-$shoppath= 'ProductsPage.php?id='.$id;
-$categorypath= 'CategoriesPage.php?id='.$id.'&';
+$homepath= ' landingpage.php?id='.$id;
+$shoppath= ' ProductsPage.php?id='.$id;
+$categorypath= ' CategoriesPage.php?id='.$id.'&';
 $cartpath= '#';
 $about= 'aboutUS.php?id='.$id;
-$contact= 'contactUS.php?id='.$id;
+$contact= ' contactUS.php?id='.$id;
 
 ?>
 
@@ -78,17 +78,17 @@ $contact= 'contactUS.php?id='.$id;
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href=".\CSS\cart.css">
+    <link rel="stylesheet" href="..\CSS\cart.css">
     <script src="https://kit.fontawesome.com/0cbb596ed4.js" crossorigin="anonymous"></script>
     <title>Cart</title>
-    <link rel="shortcut icon" href=".\Images\logo.png">
+    <link rel="shortcut icon" href="..\Images\logo.png">
 </head>
 
 <body>
 <nav style="display: flex;">
       
             <div>
-            <img width="110px" src=".\Images\logo.png" style="margin-left: 80%;">
+            <img width="110px" src="..\Images\logo.png" style="margin-left: 80%;">
             </div>
 
             <div>
@@ -129,13 +129,13 @@ $contact= 'contactUS.php?id='.$id;
             '.$pop.'<i class="fa fa-shopping-cart" aria-hidden="true"></i></a>';
 
             if (!isset($_GET["id"])) {
-                echo '<a href="login.php">Login</a>
-                      <a href="signup.php">Register</a>';
+                echo '<a href=" login.php">Login</a>
+                      <a href=" signup.php">Register</a>';
 
                       
             } else {
-                echo '<a href="userpage.php?id=' . $id . '">Account</a>';
-                echo '<a href="LandingPage.php">Log Out</a>';
+                echo '<a href=" userpage.php?id=' . $id . '">Account</a>';
+                echo '<a href=" LandingPage.php">Log Out</a>';
             }
 
             if (isset($_GET["id"])) {
@@ -174,7 +174,7 @@ $contact= 'contactUS.php?id='.$id;
                                 $index= "quan".$i;
                                 $q=$_GET[$index];
                                 
-                                /* *************** */
+                                /* -------------------------------------- */
                                 $index1= "product_id".$i;
                                 $pro_id=$_GET[$index1];
 
@@ -188,8 +188,8 @@ $contact= 'contactUS.php?id='.$id;
                     <td style="position: relative;">
                     
                         <div style="left: 0; margin: auto; display: flex; justify-content: space-around; align-items: center; width: 200px;">
-                            <a href="cart.php?id='.$id.'&del_pro='.$row['id'].'"><i style="position: absolute; left: 10px; color:#7997c5" class="fa-solid fa-square-xmark"></i></a>
-                            <img src="'. $row['image'] .'" width="50px" alt="">
+                            <a href=" cart.php?id='.$id.'&del_pro='.$row['id'].'"><i style="position: absolute; left: 10px; color:#7997c5" class="fa-solid fa-square-xmark"></i></a>
+                            <img src=".'. $row['image'] .'" width="50px" alt="">
                             <span>'.$row['name'].'</span>
                         </div>
                     </td>
@@ -200,9 +200,12 @@ $contact= 'contactUS.php?id='.$id;
                         <input type="hidden" value="'.$row['product_id'].'" name="product_id'.$i.'">
                         <input type="number" class="num" min="1" value="'.$q.'" name="quan'.$i.'" id="">
                     </td>
+
+
                     <td>$'.($row['price']*$row['quantity']).'</td>
                     </tr>';
                     
+
                     $quantity[] = $row['quantity'];
 
                     $sum+= ($row['price']*$row['quantity']);
@@ -237,7 +240,7 @@ $contact= 'contactUS.php?id='.$id;
     <footer>
         <div id="footerdiv">
             <div class="col-3">
-                <img src="./Images/logo.png">
+                <img src="../Images/logo.png">
             </div>
             <div class="col-3">
                 <h1 style="text-align: center;">Stay In Touch</h1><br>

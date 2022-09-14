@@ -1,5 +1,5 @@
 <?php
-include_once '.\Connection\connect.php';
+include_once '..\Connection\connect.php';
 
 if(isset($_GET["id"])){
   $user_id= $_GET["id"];
@@ -58,12 +58,12 @@ if(!isset($_GET["id"])){
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./CSS/LandingPage.css">
+    <link rel="stylesheet" href="../CSS/LandingPage.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet"href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <script src="https://kit.fontawesome.com/ccfa87eec6.js" crossorigin="anonymous"></script>
     <title>Home</title>
-    <link rel="shortcut icon" href=".\Images\logo.png">
+    <link rel="shortcut icon" href="..\Images\logo.png">
 </head>
 <body>
 
@@ -72,7 +72,7 @@ if(!isset($_GET["id"])){
     <nav style="display: flex;">
       
       <div>
-          <img width="110px" src=".\Images\logo.png" style="margin-left: 80%;">
+          <img width="110px" src="..\Images\logo.png" style="margin-left: 80%;">
       </div>
 
       <div>
@@ -90,11 +90,11 @@ if(!isset($_GET["id"])){
 
         if(!isset($_GET["id"])){
           echo '<a href="login.php">Login</a>
-                <a href="signup.php">Register</a>';
+                <a href=" signup.php">Register</a>';
 
         }else{
-          echo '<a href="userpage.php?id='.$user_id.'">Account</a>';
-          echo '<a href="LandingPage.php">Log Out</a>';
+          echo '<a href=" userpage.php?id='.$user_id.'">Account</a>';
+          echo '<a href=" LandingPage.php">Log Out</a>';
         }
 
         if(isset($_GET["id"])){
@@ -116,11 +116,14 @@ if(!isset($_GET["id"])){
           <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
           <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
         </ol>
+
+
         <div class="carousel-inner">
           <div class="carousel-item active">
           <div id = "img1" style="height:500px;">
-           
-                </div>
+        </div>
+
+
             <div class="carousel-caption d-none d-md-block">
               <h3 style="color: white; margin-bottom: 20%; " > Get your beloved one the best gift ever </h3>
               <p></p>
@@ -207,7 +210,7 @@ if(!isset($_GET["id"])){
                       $pbs= floor(($row['price'])/((100-$row['sale_pre'])/100)); //// price before sale 
 
                       echo ' <div class="col-3 shadow">
-                      <img height="180px"; width="200px"; src="'.$row['image'].'">
+                      <img height="180px"; width="200px"; src=".'.$row['image'].'">
                       <h4>'.$row['name'].'</h4>
                       <p id = "price_befor">'.$pbs.' JD</p>
                       <p id = "price_after">'.$row['price'].' JD</p>
@@ -237,7 +240,7 @@ if(!isset($_GET["id"])){
     <footer>
     <div id="footerdiv">
         <div class="col-3">
-            <img src="./Images/logo.png">
+            <img src="../Images/logo.png">
         </div>
         <div class="col-3">
             <h1 style="text-align: center;">Stay In Touch</h1><br>

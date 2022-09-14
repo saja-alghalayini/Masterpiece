@@ -1,5 +1,5 @@
 <?php
-include_once '.\Connection\connect.php';
+include_once '..\Connection\connect.php';
 $pro_id = $_GET["pro_id"];
 if (isset($_GET["id"])) {
     $id = $_GET["id"];
@@ -11,11 +11,14 @@ $query = "SELECT * FROM products INNER JOIN categories WHERE products.category_i
 $result = mysqli_query($conn, $query);
 $row =  mysqli_fetch_assoc($result);
 
+
 if (isset($_POST["submitrev"])) {
+
     if (isset($_GET["id"])) {
         $com = $_POST["comment"];
         $query = "INSERT INTO comments(comment, product_id, user_id) VALUES ('$com', '$pro_id', '$id');";
         $result = mysqli_query($conn, $query);
+
     } else {
         header("location: login.php");
     }
@@ -28,6 +31,7 @@ if (isset($_POST["submitrev"])) {
 if (isset($_GET["add"])) {
     addToCart($conn, $pro_id, $id);
 }
+
 function addToCart($conn, $pro_id, $id)
 {
     if (isset($_GET["id"])) {
@@ -35,16 +39,19 @@ function addToCart($conn, $pro_id, $id)
         $result2 = mysqli_query($conn, $query2);
         $resultcheck = mysqli_num_rows($result2);
         $row3 = mysqli_fetch_assoc($result2);
+
         if ($resultcheck > 0) {
             $increase = $row3['quantity'] + 1;
             $query4 = "UPDATE cart SET quantity= $increase WHERE product_id=$pro_id AND user_id=$id;";
             $result4 = mysqli_query($conn, $query4);
+
         } else {
             $query5 = "INSERT INTO cart(product_id, quantity, user_id) VALUES('$pro_id', 1, '$id');";
             $result5 = mysqli_query($conn, $query5);
         }
+
     } else {
-        header("location: login.php");
+        header("location:  login.php");
     }
 }
 
@@ -52,20 +59,21 @@ if (isset($_GET["id"])) {
     $user_id = $_GET["id"];
 }
 if (!isset($_GET["id"])) {
-    $shoppath = 'ProductsPage.php';
-    $categorypath = 'CategoriesPage.php?';
-    $cartpath = 'login.php';
-    $homepath = 'landingpage.php';
-    $about = 'aboutUS.php';
-    $contact = 'contactUS.php';
+    $shoppath = ' ProductsPage.php';
+    $categorypath = ' CategoriesPage.php?';
+    $cartpath = ' login.php';
+    $homepath = ' landingpage.php';
+    $about = ' aboutUS.php';
+    $contact = ' contactUS.php';
     $pop="";
+
 } else {
-    $shoppath = 'ProductsPage.php?id=' . $user_id;
-    $categorypath = 'CategoriesPage.php?id=' . $user_id . '&';
-    $cartpath = 'cart.php?id=' . $user_id;
-    $homepath = 'landingpage.php?id=' . $user_id;
-    $about = 'aboutUS.php?id=' . $id;
-    $contact = 'contactUS.php?id=' . $id;
+    $shoppath = ' ProductsPage.php?id=' . $user_id;
+    $categorypath = ' CategoriesPage.php?id=' . $user_id . '&';
+    $cartpath = ' cart.php?id=' . $user_id;
+    $homepath = ' landingpage.php?id=' . $user_id;
+    $about = ' aboutUS.php?id=' . $id;
+    $contact = ' contactUS.php?id=' . $id;
 
     /* ------------------------------------------------------------------------ */
 $querypop="SELECT * FROM cart INNER JOIN products WHERE cart.product_id=products.id  AND user_id=$id;";
@@ -73,7 +81,9 @@ $resultpop= mysqli_query($conn, $querypop);
 $resultcheckpop = mysqli_num_rows($resultpop);
 
 $quan_sum=0;
+
 if($resultcheckpop > 0){
+    
     while($rowpop = mysqli_fetch_assoc($resultpop)){
         $quan_sum+= $rowpop['quantity'];
     }
@@ -85,6 +95,7 @@ $_SESSION["quan_sum"]= $quan_sum;
 if($_SESSION["quan_sum"]){
 $numeric=$_SESSION["quan_sum"];
 $pop='<div class="sub">'.$numeric.'</div>';
+
 }else{
 $pop='';
 }
@@ -101,17 +112,17 @@ $pop='';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./CSS/Product.css">
+    <link rel="stylesheet" href="../CSS/Product.css">
     <script src="https://kit.fontawesome.com/aca8d5a1fa.js" crossorigin="anonymous"></script>
     <title> Single Product </title>
-    <link rel="shortcut icon" href=".\Images\logo.png">
+    <link rel="shortcut icon" href="..\Images\logo.png">
 </head>
 
 <body>
 <nav style="display: flex;">
       
             <div>
-            <img width="110px" src=".\Images\logo.png" style="margin-left: 80%;">
+            <img width="110px" src="..\Images\logo.png" style="margin-left: 80%;">
             </div>
 
             <div>
@@ -128,12 +139,12 @@ $pop='';
               '.$pop.'<i class="fa fa-shopping-cart" aria-hidden="true"></i></a>';
 
               if(!isset($_GET["id"])){
-                echo '<a href="login.php">Login</a>
-                      <a href="signup.php">Register</a>';
+                echo '<a href=" login.php">Login</a>
+                      <a href=" signup.php">Register</a>';
 
               }else{
-                echo '<a href="userpage.php?id='.$user_id.'">Account</a>';
-                echo '<a href="LandingPage.php">Log Out</a>';
+                echo '<a href=" userpage.php?id='.$user_id.'">Account</a>';
+                echo '<a href=" LandingPage.php">Log Out</a>';
               }
 
               if(isset($_GET["id"])){
@@ -159,14 +170,16 @@ $pop='';
             <?php
             if (isset($_GET["id"])) {
                 $ids ='&id='.$_GET["id"];
+
             } else {
                 $ids = '';
             }
+            
             if ($row['sale_status'] == 1) {
                 $pbs = floor(($row['price']) / ((100 - $row['sale_pre']) / 100)); //// price before sale 
                 echo '
             <div>
-                <img src="' . $row['image'] . '" alt="Product">
+                <img src=".' . $row['image'] . '" alt="Product">
             </div>
                  
             <div>
@@ -175,14 +188,14 @@ $pop='';
                 <p id = "price_befor">' . $pbs . '</p>
                 <h1 id="price">' . $row['price'] . ' JD</h1>
                 <p>' . $row['description'] . '</p><br>
-                <a href="Product.php?pro_id=' . $pro_id. $ids . '&add=1" id="addtocart" >Add to Cart</a>
+                <a href=" Product.php?pro_id=' . $pro_id. $ids . '&add=1" id="addtocart" >Add to Cart</a>
             </div>';
 
             
             } else {
                 echo '
             <div>
-                <img src="' . $row['image'] . '" alt="Product">
+                <img src=".' . $row['image'] . '" alt="Product">
             </div>
 
 
@@ -192,7 +205,7 @@ $pop='';
                 <h4>Category:' . $row['category_name'] . '</h4>
                 <h1 id="price">' . $row['price'] . ' JD</h1>
                 <p>' . $row['description'] . '</p><br>
-                <a href="Product.php?pro_id=' . $pro_id . $ids . '&add=1" id="addtocart">Add to Cart</a>
+                <a href=" Product.php?pro_id=' . $pro_id . $ids . '&add=1" id="addtocart">Add to Cart</a>
             </div>';
             }
             ?>
@@ -212,7 +225,7 @@ $pop='';
                 if(!empty($row2['user_img'])){
                     $imgsrc= $row2['user_img'];
                 }else{
-                    $imgsrc= './img/userpic.png';
+                    $imgsrc= '../img/userpic.png';
                 }
                 echo '<div id="revs">
                                 <p><img src="'.$imgsrc.'" style="width: 5%; height: 5%; border-radius:100%;"> <span style="position: relative; bottom:15px;">' . $row2['first_name'] . ' ' . $row2['last_name'] . '</span> </p>
@@ -236,7 +249,7 @@ $pop='';
     <footer>
         <div id="footerdiv">
             <div class="col-3">
-                <img src="./Images/logo.png">
+                <img src="../Images/logo.png">
             </div>
             <div class="col-3">
                 <h1 style="text-align: center;">Stay In Touch</h1><br>

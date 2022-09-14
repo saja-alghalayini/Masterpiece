@@ -2,9 +2,7 @@
 
 session_start();
 
-
-
-include_once('.\Connection\connect.php');
+include_once('..\Connection\connect.php');
 if (isset($_POST['submit'])) {
 
 
@@ -176,6 +174,7 @@ if (isset($_POST['submit'])) {
         </style>';
 
         $checkpass = false;
+
     } else {
         $checkpass = true;
     }
@@ -188,6 +187,7 @@ if (isset($_POST['submit'])) {
         </style>';
 
         $checkco = false;
+
     } else {
         $checkco = true;
     }
@@ -214,10 +214,10 @@ if (isset($_POST['submit'])) {
         mysqli_close($conn);
 
         echo "<script language='javascript'>
-setTimeout(() => {
-    window.location.href = 'login.php'; 
- }, 3000);
-</script>";
+        setTimeout(() => {window.location.href = ' login.php';}, 3000);
+        
+        </script>";
+
     }
 
 
@@ -240,11 +240,11 @@ setTimeout(() => {
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://fonts.googleapis.com/css2?family=Orbitron&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="./CSS/signup.css">
-    <link rel="icon" type="image/png" sizes="32x32" href="./img/favicon-32x32.png">
+    <link rel="stylesheet" href="../CSS/signup.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="../img/favicon-32x32.png">
     <script src="https://kit.fontawesome.com/ccfa87eec6.js" crossorigin="anonymous"></script>
-    <title>Register Page</title>
-    <link rel="shortcut icon" href=".\Images\logo.png">
+    <title>Registration</title>
+    <link rel="shortcut icon" href="..\Images\logo.png">
 
     <style>
 input {
@@ -311,17 +311,17 @@ input[type=submit] {
 <body>
     <nav>
         <div class="logo">
-        <img width="110px" src=".\Images\logo.png" style="margin-left: 80%;">
+        <img width="110px" src="..\Images\logo.png" style="margin-left: 80%;">
         </div>
 
         <div class="tab1">
-            <a href="landingpage.php">HOME</a>
-            <a href="ProductsPage.php">PRODUCTS</a>
-            <a href="contactUS.php">CONTACT US</a>
-            <a href="aboutUS.php">ABOUT US</a>
+            <a href=" landingpage.php">HOME</a>
+            <a href=" ProductsPage.php">PRODUCTS</a>
+            <a href=" contactUS.php">CONTACT US</a>
+            <a href=" aboutUS.php">ABOUT US</a>
         </div>
         <div class="tab2">
-            <a href="login.php">LOGIN</a>
+            <a href=" login.php">LOGIN</a>
         </div>
     </nav>
     <section id="intro">
@@ -340,8 +340,8 @@ input[type=submit] {
 
                             <input name='lname' id="last-name" type="text" required="true" placeholder='last name' class='na2' value="<?php if(isset($x33)) echo $x33;?>">
 
-                            <img src="./img/icon-error (1).svg" class="error-icon" alt="" id="i1">
-                            <p class="error-text" id='one'>Name field required only alphabet characters</p>
+                            <img src="../img/icon-error (1).svg" class="error-icon" alt="" id="i1">
+                            <p class="error-text" id='one'>Name field required alphabet characters only</p>
                             <?php if (isset($b)) {
                                 echo $b;
                             } ?>
@@ -349,10 +349,10 @@ input[type=submit] {
 
 
                         <div class="field-group">
-                            <label for="Mobile">Mobile Numde</label>
+                            <label for="Mobile">Mobile Number</label>
                             <input name='Mobile' id="Mobile" type="number" required="true" value="<?php if(isset($x2)) echo $x2;?>">
-                            <img src="./img/icon-error (1).svg" class="error-icon" alt="" id='i5'>
-                            <p class="error-text" id='five'>Mobile Numde must btween 10-14 diget</p>
+                            <img src="../img/icon-error (1).svg" class="error-icon" alt="" id='i5'>
+                            <p class="error-text" id='five'>Mobile number must contain 10-14 digets only</p>
                             <?php if (isset($c)) {
                                 echo $c;
                             } ?>
@@ -363,7 +363,7 @@ input[type=submit] {
                             <label for="Date"> Date of Birth</label>
                             <input name='Date' id="Date" type="date" required="true" value="<?php if(isset($x4)) echo $x4;?>">
                             <img src="../img/icon-error (1).svg" class="error-icon" alt="" id='i6'>
-                            <p class="error-text" id='six'>age can not be under 16</p>
+                            <p class="error-text" id='six'>Age supposed to be older than 16</p>
                             <?php if (isset($d)) {
                                 echo $d;
                             } ?>
@@ -374,8 +374,8 @@ input[type=submit] {
                             <label for="Email">Email Address</label>
                             <input name='Email' id="Email"  type="email" required="true" value="<?php if(isset($x1)) echo $x1;?>">
                             <img src="./img/icon-error (1).svg" class="error-icon" alt="" id='i7'>
-                            <p class="error-text" id='seven'>Looks like this is not email</p>
-                            <p class="error-text" id='seven1'>this email already sign up</p>
+                            <p class="error-text" id='seven'>Looks like this is not an email address</p>
+                            <p class="error-text" id='seven1'>this email have been already used</p>
                             <?php if (isset($e)) {
                                 echo $e;
                             } ?>
@@ -387,20 +387,23 @@ input[type=submit] {
                             <input name='password' id="password" value="" type="password" required="true" >
                             <img src="./img/icon-error (1).svg" class="error-icon" alt="" id='i8'>
                             <p class="error-text" id='eight'>password syntax is Incorrect'</p>
+                            <p class="error-text" id='eight6'>password lenght should be 8 or more</p>
                             <p class="error-text" id='eight2'>first letter must be capital</p>
+                            <p class="error-text" id='eight5'>password can not contain a space</p>
                             <p class="error-text" id='eight3'>password must contain 2 numbers at least</p>
                             <p class="error-text" id='eight4'>password must contain at least 1 special character</p>
-                            <p class="error-text" id='eight5'>password can not contain a space</p>
-                            <p class="error-text" id='eight6'>password lenght should be 8 or more</p>
                             <div id="message">
 
 
-  <h3 style="font-size: 11px;">Password must contain the following:</h3>
-  <p id="letter" style="font-size: 12px;" class="invalid">A <b>lowercase</b> letter</p>
-  <p id="capital" style="font-size: 12px;" class="invalid">A <b>capital (uppercase)</b> letter</p>
-  <p id="number"  style="font-size: 12px;" class="invalid">A <b>number</b></p>
-  <p id="length" style="font-size: 12px;" class="invalid">Minimum <b>8 characters</b></p>
-</div>
+                            <h3 style="font-size: 11px;">Password must contain the following:</h3>
+                            <p id="letter" style="font-size: 12px;" class="invalid">A <b>lowercase</b> letter</p>
+                            <p id="capital" style="font-size: 12px;" class="invalid">A <b>capital (uppercase)</b> letter</p>
+                            <p id="number"  style="font-size: 12px;" class="invalid">A <b>number</b></p>
+                            <p id="length" style="font-size: 12px;" class="invalid">Minimum <b>8 characters</b></p>
+                        </div>
+
+
+
                             <?php if (isset($f)) {
                                 echo $f;
                             } ?>
@@ -408,7 +411,7 @@ input[type=submit] {
                         <div class="field-group">
                             <label for="Confirm">Confirm Password</label>
                             <input name='Confirm' id="Confirm" value="" type="password" required="true">
-                            <img src="./img/icon-error (1).svg" class="error-icon" alt="" id='i9'>
+                            <img src="../img/icon-error (1).svg" class="error-icon" alt="" id='i9'>
                             <p class="error-text" id='nine'>Password not matching</p>
                             <?php if (isset($g)) {
                                 echo $g;
@@ -416,7 +419,7 @@ input[type=submit] {
                         </div>
                         <input type="submit" value='Sign Up' name='submit' id='signup'>
                         <div class="pop">
-                            <p id='reg'> successfully registered</p>
+                            <p id='reg'> you have successfully registered</p>
                         </div>
                             <?php if (isset($reg)) {
                                 echo $reg;
@@ -432,7 +435,7 @@ input[type=submit] {
     <footer>
     <div id="footerdiv">
         <div class="col-3">
-            <img src="./Images/logo.png">
+            <img src="../Images/logo.png">
         </div>
         <div class="col-3">
             <h1 style="text-align: center;">Stay In Touch</h1><br>

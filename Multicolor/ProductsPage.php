@@ -1,25 +1,30 @@
 <?php
-include_once '.\Connection\connect.php';
+include_once '..\Connection\connect.php';
 
 if (isset($_GET["id"])) {
     $id = $_GET["id"];
     $loginpath = "&id=" . $id;
     $cart = "cart.php?id=$id";
+
 } else {
     $loginpath = "";
     $cart = "login.php";
 }
+
 if (isset($_GET["id"])) {
+
     if (isset($_GET["add"])) {
         $pro_id = $_GET['pro_id']; //$
         $query2 = "SELECT * FROM cart WHERE product_id=$pro_id AND user_id=$id;";
         $result2 = mysqli_query($conn, $query2);
         $resultcheck = mysqli_num_rows($result2);
         $row3 = mysqli_fetch_assoc($result2);
+
         if ($resultcheck > 0) {
             $increase = $row3['quantity'] + 1;
             $query4 = "UPDATE cart SET quantity= $increase WHERE product_id=$pro_id AND user_id=$id;";
             $result4 = mysqli_query($conn, $query4);
+
         } else {
             $query5 = "INSERT INTO cart(product_id, quantity, user_id) VALUES('$pro_id', 1, '$id');";
             $result5 = mysqli_query($conn, $query5);
@@ -32,21 +37,21 @@ if (isset($_GET["id"])) {
 }
 
 if (!isset($_GET["id"])) {
-    $shoppath = 'ProductsPage.php';
-    $categorypath = 'CategoriesPage.php?';
-    $cartpath = 'login.php';
-    $homepath = 'landingpage.php';
-    $about = 'aboutUS.php';
-    $contact = 'contactUS.php';
+    $shoppath = ' ProductsPage.php';
+    $categorypath = ' CategoriesPage.php?';
+    $cartpath = ' login.php';
+    $homepath = ' landingpage.php';
+    $about = ' aboutUS.php';
+    $contact = ' contactUS.php';
     $pop="";
 
 } else {
-    $shoppath = 'ProductsPage.php?id=' . $user_id;
-    $categorypath = 'CategoriesPage.php?id=' . $user_id . '&';
-    $cartpath = 'cart.php?id=' . $user_id;
-    $homepath = 'landingpage.php?id=' . $user_id;
-    $about = 'aboutUS.php?id=' . $user_id;
-    $contact = 'contactUS.php?id=' . $user_id;
+    $shoppath = ' ProductsPage.php?id=' . $user_id;
+    $categorypath = ' CategoriesPage.php?id=' . $user_id . '&';
+    $cartpath = ' cart.php?id=' . $user_id;
+    $homepath = ' landingpage.php?id=' . $user_id;
+    $about = ' aboutUS.php?id=' . $user_id;
+    $contact = ' contactUS.php?id=' . $user_id;
 
 // ---------------------------------------------------------------------------- //
 $querypop="SELECT * FROM cart INNER JOIN products WHERE cart.product_id=products.id  AND user_id=$id;";
@@ -55,6 +60,7 @@ $resultcheckpop = mysqli_num_rows($resultpop);
 
 $quan_sum=0;
 if($resultcheckpop > 0){
+
     while($rowpop = mysqli_fetch_assoc($resultpop)){
         $quan_sum+= $rowpop['quantity'];
     }
@@ -64,8 +70,10 @@ $_SESSION["quan_sum"]= $quan_sum;
 
 
 if($_SESSION["quan_sum"]){
+
 $numeric=$_SESSION["quan_sum"];
 $pop='<div class="sub">'.$numeric.'</div>';
+
 }else{
 $pop='';
 }
@@ -82,17 +90,17 @@ $pop='';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./CSS/ProductsPage.css">
+    <link rel="stylesheet" href="../CSS/ProductsPage.css">
     <script src="https://kit.fontawesome.com/aca8d5a1fa.js" crossorigin="anonymous"></script>
     <title>Products</title>
-    <link rel="shortcut icon" href=".\Images\logo.png">
+    <link rel="shortcut icon" href="..\Images\logo.png">
 </head>
 
 <body>
 <nav style="display: flex;">
       
       <div>
-      <img width="110px" src=".\Images\logo.png" style="margin-left: 80%;">
+      <img width="110px" src="..\Images\logo.png" style="margin-left: 80%;">
       </div>
 
       <div>
@@ -109,12 +117,12 @@ $pop='';
         '.$pop.'<i class="fa fa-shopping-cart" aria-hidden="true"></i></a>';
 
         if(!isset($_GET["id"])){
-          echo '<a href="login.php">Login</a>
-                <a href="signup.php">Register</a>';
+          echo '<a href=" login.php">Login</a>
+                <a href=" signup.php">Register</a>';
 
         }else{
-          echo '<a href="userpage.php?id='.$user_id.'">Account</a>';
-          echo '<a href="LandingPage.php">Log Out</a>';
+          echo '<a href=" userpage.php?id='.$user_id.'">Account</a>';
+          echo '<a href=" LandingPage.php">Log Out</a>';
         }
 
         if(isset($_GET["id"])){
@@ -149,20 +157,20 @@ $pop='';
 
                     if (isset($_GET["id"])) {
                         $id = $_GET["id"];
-                        $cartpath = 'ProductsPage.php?pro_id=' . $row['id'] . '&id=' . $id . '&add=1';
+                        $cartpath = ' ProductsPage.php?pro_id=' . $row['id'] . '&id=' . $id . '&add=1';
 
                     } else {
-                        $cartpath = "login.php";
+                        $cartpath = " login.php";
                     }
 
             // ------------------ Products with sale ------------------ //
                     $pbs = floor(($row['price']) / ((100 - $row['sale_pre']) / 100));// Before Sale Price
 
                     echo '<div>
-                         <a href="Product.php?pro_id=' . $row["id"] . $loginpath . '"><img src="' . $row["image"] . '" alt="Product"></a>
+                         <a href=" Product.php?pro_id=' . $row["id"] . $loginpath . '"><img src=".' . $row["image"] . '" alt="Product"></a>
                          
                          <h5>' . $row["category_name"] . '</h5>
-                         <a href="Product.php?pro_id=' . $row["id"] . $loginpath . '">  <h3>' . $row["name"] . '</h3></a>
+                         <a href=" Product.php?pro_id=' . $row["id"] . $loginpath . '">  <h3>' . $row["name"] . '</h3></a>
 
                          <div class="rearrange">
                          <span id="price_after">' . $row["price"] . ' JD  </span>
@@ -186,17 +194,17 @@ $pop='';
 
                     if (isset($_GET["id"])) {
                         $id = $_GET["id"];
-                        $cartpath = 'ProductsPage.php?pro_id=' . $row['id'] . '&id=' . $id . '&add=1';
+                        $cartpath = ' ProductsPage.php?pro_id=' . $row['id'] . '&id=' . $id . '&add=1';
 
                     } else {
-                        $cartpath = "login.php";
+                        $cartpath = " login.php";
                     }
 
                     echo '<div>
-                        <a href="Product.php?pro_id=' . $row["id"] . $loginpath . '"> <img src="' . $row["image"] . '" alt="Product"></a>
+                        <a href=" Product.php?pro_id=' . $row["id"] . $loginpath . '"> <img src=".' . $row["image"] . '" alt="Product"></a>
                         <h5>' . $row["category_name"] . '</h5>
 
-                        <a ihref="Product.php?pro_id=' . $row["id"] . $loginpath . '"> <h3>' . $row["name"] . '</h3> </a>
+                        <a ihref=" Product.php?pro_id=' . $row["id"] . $loginpath . '"> <h3>' . $row["name"] . '</h3> </a>
                         <h2 style="margin-top: 30px;" class="rearrange">' . $row["price"] . ' JD </h2>
                         
                         <a href=' . $cartpath . ' id="addtocart">Add to Cart</a>
@@ -208,32 +216,39 @@ $pop='';
         </div>
     </div>
 </body>
+
+
 <footer>
     <div id="footerdiv">
         <div class="col-3">
-            <img src="./Images/logo.png">
+            <img src="../Images/logo.png">
         </div>
+
         <div class="col-3">
             <h1 style="text-align: center;">Stay In Touch</h1><br>
             <h2 style="text-align: center;"></h2>
             <p style="text-align: center;" >
+            
             <a href="https://web.facebook.com/Saja.AlGhalayini/" target="_blank"><i class="fa-brands fa-facebook" style="display: inline;"></a></i>
                     <a href="https://www.instagram.com/_saja_alghalayini/" target="_blank"><i class="fa-brands fa-instagram" style="display: inline;"></a></i>
                     <a href="https://www.linkedin.com/in/saja-al-ghalayini/" target="_blank"><i class="fa-brands fa-linkedin" style="display: inline;"></a></i>
                     <br>
+
             <p style="text-align: center;">copyright <i class="fa-solid fa-copyright"></i> 2022 Multicolor</p>
         </div>
+
         <div class="col-3">
         <h1> What Artiest Said </h1>
        
-<p> If I could say it in words there would be no reason to paint.<br>
-— Edward Hopper. <b>
-</p>
+        <p> If I could say it in words there would be no reason to paint.<br>
+        — Edward Hopper. <b>
+        </p>
+
     </div>
-            </div>
+    </div>
     </footer>
 
-    <?php 
-print_r($row);
-?>
+    <?php print_r($row); ?>
+
+
 </html>

@@ -1,5 +1,5 @@
 <?php
-include_once '.\Connection\connect.php';
+include_once '..\Connection\connect.php';
 
 if (isset($_GET['id'])) {
     $id = $_GET['id'];
@@ -47,22 +47,22 @@ if (isset($_GET["id"])) {
 
 
 if (!isset($_GET["id"])) {
-    $shoppath = 'ProductsPage.php';
-    $categorypath = 'CategoriesPage.php?';
-    $cartpath = 'login.php';
-    $homepath = 'landingpage.php';
-    $about = 'aboutUS.php';
-    $contact = 'contactUS.php';
+    $shoppath = ' ProductsPage.php';
+    $categorypath = ' CategoriesPage.php?';
+    $cartpath = ' login.php';
+    $homepath = ' landingpage.php';
+    $about = ' aboutUS.php';
+    $contact = ' contactUS.php';
     $pop="";
 
 
 } else {
-    $shoppath = 'ProductsPage.php?id=' . $id;
-    $categorypath = 'CategoriesPage.php?id=' . $id . '&';
-    $cartpath = 'cart.php?id=' . $id;
-    $homepath = 'landingpage.php?id=' . $id;
-    $about = 'aboutUS.php?id=' . $id;
-    $contact = 'contactUS.php?id=' . $id;
+    $shoppath = ' ProductsPage.php?id=' . $id;
+    $categorypath = ' CategoriesPage.php?id=' . $id . '&';
+    $cartpath = ' cart.php?id=' . $id;
+    $homepath = ' landingpage.php?id=' . $id;
+    $about = ' aboutUS.php?id=' . $id;
+    $contact = ' contactUS.php?id=' . $id;
 
 
 
@@ -99,9 +99,9 @@ $pop='';
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="./CSS/ProductsPage.css">
+    <link rel="stylesheet" href="../CSS/ProductsPage.css">
     <script src="https://kit.fontawesome.com/aca8d5a1fa.js" crossorigin="anonymous"></script>
-    <link rel="shortcut icon" href=".\Images\logo.png">
+    <link rel="shortcut icon" href="..\Images\logo.png">
     <title>Categories</title>
 </head>
 
@@ -109,7 +109,7 @@ $pop='';
 <nav style="display: flex;">
       
             <div>
-            <img width="110px" src=".\Images\logo.png" style="margin-left: 80%;">
+            <img width="110px" src="..\Images\logo.png" style="margin-left: 80%;">
             </div>
 
             <div>
@@ -126,12 +126,12 @@ $pop='';
               '.$pop.'<i class="fa fa-shopping-cart" aria-hidden="true"></i></a>';
 
               if(!isset($_GET["id"])){
-                echo '<a href="login.php">Login</a>
-                      <a href="signup.php">Register</a>';
+                echo '<a href=" login.php">Login</a>
+                      <a href=" signup.php">Register</a>';
 
               }else{
-                echo '<a href="userpage.php?id='.$id.'">Account</a>';
-                echo '<a href="LandingPage.php">Log Out</a>';
+                echo '<a href=" userpage.php?id='.$id.'">Account</a>';
+                echo '<a href=" LandingPage.php">Log Out</a>';
               }
 
               if(isset($_GET["id"])){
@@ -157,15 +157,15 @@ $pop='';
             if ($resultcheck > 0) {
                 while ($row = mysqli_fetch_assoc($result)) {
                     if (isset($_GET['id'])) { 
-                        $path = 'CategoriesPage.php?cat_id=' . $cat_id . '&pro_id=' . $row["id"] . '&id=' . $id . '&add=1';
+                        $path = ' CategoriesPage.php?cat_id=' . $cat_id . '&pro_id=' . $row["id"] . '&id=' . $id . '&add=1';
                     } else {
-                        $path = "login.php";
+                        $path = " login.php";
                     }
                     $pbs = floor(($row['price']) / ((100 - $row['sale_pre']) / 100)); //// price before sale
 
                     echo '<div>
-                    <a href="Product.php?pro_id=' . $row["id"] . $loginpath . '"><img src="' . $row['image'] . '" alt="Product"></a>
-                    <a href="Product.php?pro_id=' . $row["id"] . $loginpath . '"><h3>' . $row['name'] . '</h3></a>
+                    <a href=" Product.php?pro_id=' . $row["id"] . $loginpath . '"><img src=".' . $row['image'] . '" alt="Product"></a>
+                    <a href=" Product.php?pro_id=' . $row["id"] . $loginpath . '"><h3>' . $row['name'] . '</h3></a>
                     <div class="rearrange">
                     <span id = "price_befor">' . $pbs . ' JD</span>
                     <span id="price_after">' . $row['price'] . ' JD</span>
@@ -181,14 +181,14 @@ $pop='';
                 // --------------------------------------------------------------------- //
                 while ($row = mysqli_fetch_assoc($result)) {
                     if (isset($_GET['id'])) { 
-                        $path = 'CategoriesPage.php?cat_id=' . $cat_id . '&pro_id=' . $row["id"] . '&id=' . $id . '&add=1';
+                        $path = ' CategoriesPage.php?cat_id=' . $cat_id . '&pro_id=' . $row["id"] . '&id=' . $id . '&add=1';
                     } else {
-                        $path = "login.php";
+                        $path = " login.php";
                     }
 
                     echo '<div>
-                    <a href="Product.php?pro_id=' . $row["id"] . $loginpath . '"><img src="' . $row['image'] . '" alt="Product"></a>
-                    <a href="Product.php?pro_id=' . $row["id"] . $loginpath . '"><h3>' . $row['name'] . '</h3></a>
+                    <a href=" Product.php?pro_id=' . $row["id"] . $loginpath . '"><img src=".' . $row['image'] . '" alt="Product"></a>
+                    <a href=" Product.php?pro_id=' . $row["id"] . $loginpath . '"><h3>' . $row['name'] . '</h3></a>
                     <h2 style="margin-top:30px;"  class="rearrange">' . $row['price'] . ' JD</h2>
                     <a href="' . $path . '" id="addtocart">Add to Cart</a>
                     </div>';
@@ -202,7 +202,7 @@ $pop='';
     <footer>
     <div id="footerdiv">
         <div class="col-3">
-            <img src="./Images/logo.png">
+            <img src="../Images/logo.png">
         </div>
         <div class="col-3">
             <h1 style="text-align: center;">Stay In Touch</h1><br>

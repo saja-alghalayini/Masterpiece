@@ -48,7 +48,7 @@
 
 
         <div class="col-3">
-            <a href="../AdminProducts.php">
+            <a href="../Admin/AdminProducts.php">
                 <h1>Products</h1>
                 <i class="fa-solid fa-list"></i>
             </a>
