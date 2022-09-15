@@ -225,7 +225,7 @@ $pop='';
                 if(!empty($row2['user_img'])){
                     $imgsrc= $row2['user_img'];
                 }else{
-                    $imgsrc= '../img/userpic.png';
+                    $imgsrc= '../Images/userpic.png';
                 }
                 echo '<div id="revs">
                                 <p><img src="'.$imgsrc.'" style="width: 5%; height: 5%; border-radius:100%;"> <span style="position: relative; bottom:15px;">' . $row2['first_name'] . ' ' . $row2['last_name'] . '</span> </p>

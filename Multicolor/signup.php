@@ -34,6 +34,7 @@ if (isset($_POST['submit'])) {
         $b = '<style type="text/css">
         #i1, #one {
             display: inline;
+            color:red;
         }
         </style>';
     }
@@ -48,6 +49,7 @@ if (isset($_POST['submit'])) {
         $c = '<style type="text/css">
         #i5, #five {
             display: inline;
+            color:red;
         }
 
         </style>';
@@ -62,6 +64,7 @@ if (isset($_POST['submit'])) {
     } else {
         $d = '<style type="text/css">
         #i6, #six {
+            color:red;
             display: inline;
         }
         </style>';
