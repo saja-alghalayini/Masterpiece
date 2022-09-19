@@ -84,13 +84,14 @@ $resultcheck = mysqli_num_rows($run);
     <script src="https://kit.fontawesome.com/aca8d5a1fa.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Admin Users</title>
+    <link rel="shortcut icon" href="..\Images\logo.png">
 </head>
 <body>
     <nav>
     <div id="parent">
         <div class="col-11">
             <img src="../Images/logo.png" alt="logo">
-            <a href="AdminDashboard.php"><span>Admin Dashboard</span></a>
+            <a href="AdminDashboard.php"><span> Admin Dashboard </span></a>
         </div>
         <div class="col">
             <a href="AdminLogin.php"><span>Log Out</span></a>
@@ -103,7 +104,7 @@ $resultcheck = mysqli_num_rows($run);
     </div>
     <hr>
     <div class="container">
-    <p style="text-align: left; color: #888">Total number of users: <?php echo $resultcheck; ?><p>
+    <p style="text-align: left; color: #888"> Total number of users: <?php echo $resultcheck; ?><p>
 
     <div id="editdiv" style="display: <?php echo $display?>;">
                 <form method="post">

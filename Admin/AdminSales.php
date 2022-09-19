@@ -16,6 +16,7 @@ if($check > 0){
         $total+= $row2["total"];
     }
 }
+
 ?>
 
 <!DOCTYPE html>
@@ -28,6 +29,7 @@ if($check > 0){
     <script src="https://kit.fontawesome.com/aca8d5a1fa.js" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <title>Admin Sales</title>
+    <link rel="shortcut icon" href="..\Images\logo.png">
 </head>
 <body>
     <nav>
@@ -49,7 +51,7 @@ if($check > 0){
     <hr>
 
     <div class="container">
-    <p style="text-align: left; color: #888">Total Earnings: $<?php echo $total; ?><p>
+    <p style="text-align: left; color: #888">Total Earnings: <?php echo $total; ?> JD<p>
     <table>
     <tr>
                 <th>Order ID</th>

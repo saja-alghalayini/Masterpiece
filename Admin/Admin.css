@@ -1,3 +1,4 @@
+/* ------------------------------- Navbar Section Starts--------------------------- */
 nav {
     background-color: #92b1e065;
     width: 100%;
@@ -15,6 +16,12 @@ nav span {
 
 nav span:hover{
     color: #56a5a1;
+}
+
+.logout{
+    color: #8461a8;
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 20px;
 }
 
 a{
@@ -36,12 +43,15 @@ a:hover{
     align-items: center;
 }
 
+/* ------------------------------- Navbar Section Ends--------------------------- */
+
+
 .container{
     text-align: center;
 }
 
 .container div {
-    border: solid 1px #9D84B7;
+    border: dotted 3px #9D84B7;
     border-radius: 10px;
     margin: 5%;
     padding: 2%;
@@ -49,21 +59,40 @@ a:hover{
     display: inline-block;
 }
 
-
-.fa-solid{
-    font-size: 100px;
-}
-
-
 .container a {
     color: #9D84B7;
     text-decoration: none;
 }
 
-
 .container a:hover {
-    color: #71ccc7cd;
+    color: #3eb9d2;
     text-decoration: none;
+}
+
+.items {
+    border-radius: 5px;
+    display: grid;
+    grid-template-rows: 2fr 1fr;
+    grid-gap: 10px;
+    cursor: pointer;
+    border: 3px dotted black;
+    transition: all 0.6s;
+}
+
+ .items:hover {
+	 border: 3px solid #3eb9d2;
+}
+
+ .items:hover .project-name p {
+	 transform: translateY(-10px);
+}
+
+ .items:hover .icon-wrapper i {
+	 transform: translateY(5px);
+}
+  
+.fa-solid{
+    font-size: 100px;
 }
 
 table{
@@ -93,37 +122,8 @@ img {
     justify-content: space-around;
 }
 
-/* -------------------------------- Start Admin Login CSS -------------------------------- */
-.container div {
-    border:solid black 1px;
-    width: 80%;
-    margin-top: 100px;
-    border-radius: 0;
+h1,.icons{
+    font-weight: bold !important;
+    transform: translateY(0px);
+	transition: all 0.5s;
 }
-h1{
-margin-bottom: 50px;
-}
-.error-icon,
-.error-text {
-    display: none;
-}
-
-#login{
-    /* letter-spacing: 3px; */
-    background-color: #9D84B7;
-    color: #71ccc7cd;
-    margin-top: 20px;
-    box-shadow:0 0 4px 4px #9D84B7;
-    border: none;
-    width: 20%;
-}
-#login:hover{
-    background-color: #71ccc7cd;
-    color: #9D84B7;
-    box-shadow:0 0 4px 4px #71ccc7cd;
-
-}
-#i11, #i22 {
-    width: 25px;
-}
-/* -------------------------------- End Admin Login CSS -------------------------------- */
