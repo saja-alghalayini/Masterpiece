@@ -57,28 +57,29 @@ if (isset($_POST['submit'])){
 
     <div class="container">
 
-    <form  method="post">
-        <div>
+<form  method="post">
+    <div>
 
-        <h1> LOGIN </h1>
-              <label for="Email" class="col-2">Email Address:</label>
-              <input class="col-3" name='email' id="Email" value="" type="email"  required="true"><br><br>
+    <h2> LOGIN </h2>
+          <label for="Email" class="col-2">Email:</label>
+          <input class="col-3" name='email' id="Email" value="" type="email"  required="true"><br><br>
 
-            
-              <label for="password" class="col-2">Password:</label>
-              <input class="col-3" name='Password' id="password" value="" type="password"  required="true"><br><br>
+        
+          <label for="password" class="col-2">Password:</label>
+          <input class="col-3" name='Password' id="password" value="" type="password"  required="true"><br><br>
 
-              
-              <img src="../img/icon-error (1).svg" class="error-icon" alt="" id='i22'>
-              <p class="error-text" id='two2'> wrong email or password </p> 
-            
-              <?php if(isset($wrong2)){echo $wrong2;}?>              
-            
-          <br>
-            <input type="submit" value='LOGIN' name='submit' id='login'> 
-          </form>
-    </div>
+          
+          <!-- <img src="../img/icon-error (1).svg" class="error-icon" alt="" id='i22'> -->
+          <p class="error-text" id='two2'> wrong email or password </p> 
+        
+          <?php if(isset($wrong2)){echo $wrong2;}?>              
+        
+      <br>
+        <input type="submit" value='LOGIN' name='submit' id='login'> 
+      </form>
+</div>
 
-    </div>
+</div>
+
 </body>
 </html>

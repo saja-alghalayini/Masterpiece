@@ -42,35 +42,59 @@ a:hover{
 
 /* -------------------------------- Start Admin Login CSS -------------------------------- */
 .container div {
-    border:solid black 1px;
-    width: 80%;
+    border: solid 1px #9D84B7;
+    width: 50%;
     margin-top: 100px;
-    border-radius: 0;
+    margin-left: 25%;
+    padding-top: 4%;
+    box-shadow:  2px 2px 10px #9D84B7;
 }
-h1{
-margin-bottom: 50px;
+
+h2{
+    text-align: center;
+    padding-bottom: 5%;
 }
+
+.col-2{
+    margin-left: 20%;
+}
+
 .error-icon,
 .error-text {
     display: none;
+    justify-content: center;
+}
+
+.error-text {
+    margin-left: 30%;
+	font-size: 17px;
+	color: rgba(255, 0, 0, 0.747);
+	font-weight: 500;
+}
+
+.error-icon {
+	position: absolute;
+	top: 0;
+	right: 2%;
+	top: 33%;
+    justify-content: center;
 }
 
 #login{
-    /* letter-spacing: 3px; */
     background-color: #9D84B7;
     color: #71ccc7cd;
-    margin-top: 20px;
+    margin-top: 5%;
+    margin-bottom: 25px;
+    margin-left: 40%;
     box-shadow:0 0 4px 4px #9D84B7;
     border: none;
     width: 20%;
 }
+
 #login:hover{
     background-color: #71ccc7cd;
     color: #9D84B7;
     box-shadow:0 0 4px 4px #71ccc7cd;
+}
 
-}
-#i11, #i22 {
-    width: 25px;
-}
 /* -------------------------------- End Admin Login CSS -------------------------------- */
