@@ -77,11 +77,9 @@ if (isset($_POST['submit'])){
 
 
   <section id="intro">
-    <div class="container">
-      <div class="left-col">
-        
-      </div>
-
+    <!-- <div class="container">
+      <div class="left-col"></div> -->
+      
       
       <div class="right-col">
         
@@ -93,8 +91,9 @@ if (isset($_POST['submit'])){
             <div class="field-group">
               <label for="Email">Email Address</label><br>
               <input name='email' id="Email" value="" type="email"  required="true">
+              <br>
               <img src="./img/icon-error (1).svg" class="error-icon" alt="" id='inv11'>
-              <p class="error-text" id='inv1'>Invalid email</p>
+              <p class="error-text" id='inv1'>Invalid Email</p>
               <?php if(isset($wrong1)){echo $wrong1;}?>               
             </div>
 
@@ -102,14 +101,14 @@ if (isset($_POST['submit'])){
             <div class="field-group">
               <label for="password">Password </label><br>
               <input name='Password' id="password" value="" type="password"  required="true">
+              <br>
               <img src="./img/icon-error (1).svg" class="error-icon" alt="" id='inv2'>
-              <p class="error-text" id='inv22'>wrong password</p> 
+              <p class="error-text" id='inv22'>Wrong Password</p> 
               
               <?php if(isset($wrong2)){echo $wrong2;}?>              
             </div>
           
             <input type="submit" value='LOGIN' name='submit' id='login'> 
-            <p class="form-footer">By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
           </form>
         </div>
         
@@ -117,13 +116,15 @@ if (isset($_POST['submit'])){
     </div>
   </section>
 
+
+
   <footer>
     <div id="footerdiv">
         <div class="col-3">
             <img src="./Images/logo.png">
         </div>
         <div class="col-3">
-            <h1 style="text-align: center; margin-top:0; color:white;">Stay In Touch</h1><br>
+            <h1 style="text-align: center; margin-top:0; color:#653B88;">Stay In Touch</h1><br>
             <h2 style="text-align: center;"></h2>
             <p style="text-align: center;" >
             <a href="https://web.facebook.com/Saja.AlGhalayini/" target="_blank"><i class="fa-brands fa-facebook" style="display: inline;"></a></i>

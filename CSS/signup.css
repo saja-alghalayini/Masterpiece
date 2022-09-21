@@ -98,11 +98,6 @@ html {
 }
 
 
-.right-col {
-	flex: 1;
-}
-
-
 .h1{
   font-family: Arial, Helvetica, sans-serif;
 	text-align: center;
@@ -114,13 +109,9 @@ html {
 
 
  .form-container {
-	
-	
-	background-color: #bfecef9a;
-	border: #bfecef9a;
+	padding: 40px;
+	background-color: #bfecef;
 	padding: 30px;
-	/* border-radius: 15px; */
-	box-shadow: 0 8px hsla(249, 93%, 32%, 0.404);
 }
 
 
@@ -133,7 +124,7 @@ html {
 label {
     text-align: left;
     margin-bottom: 5px;
-    font-size: 12px;
+    font-size: 16px;
     padding: 10px;
 	color: hsla(249, 10%, 26%, 0.678);
 }
@@ -148,7 +139,7 @@ label {
 	outline: none;
 	color: hsl(249, 10%, 26%);
 	font-family: 'Poppins', sans-serif;
-	font-size: 10px;
+	font-size: 16px;
 }
 
 
@@ -160,20 +151,22 @@ label {
 #signup{
 	background-color: #9D84B7;
     color: #B3E8E5;
+	margin-top: 15px;
 	box-shadow:0 0 4px 4px #9D84B7;
 	font-size: 15px;
-	margin-top: 10px;
-	/* box-shadow:0 0 4px 4px #3FB4BE; */
 	width:fit-content;
+	border: none;
 	padding: 7px 40px;
-	border-radius: 50px;
+	font-weight: 500;
+    margin-left: 35%;
 }
 
 
 #signup:hover{
-  background-color: #71ccc7cd;
-  color: #9D84B7;
-  border: none ;
+	background-color: #71ccc7cd;
+	color: #9D84B7;
+	box-shadow:0 0 4px 4px #71ccc7cd;
+	font-weight: 500;
 }
 
 
@@ -182,20 +175,13 @@ label {
 	color: hsl(246, 25%, 77%);
 }
 
-
-.form-footer span {
-	color: #3FB4BE;
-	font-weight: 700;
-}
-
-
 .error-text {
 	text-align: right;
 	bottom: 0;
 	right: 0;
 	font-size: 12px;
 	font-style: italic;
-	color: hsl(0, 100%, 3%);
+	color: red;
 	font-weight: 500;
 }
 
@@ -247,7 +233,9 @@ label {
 
 @media only screen and (min-width: 1000px) {
 	#intro {
-		background-image: url(./images/bg-intro-desktop.png);
+		background-image: url(https://cdn.discordapp.com/attachments/944998982449528843/1022249805193424926/signupBG.png);
+		background-repeat: no-repeat;
+		background-size: cover;
 	}
 	.container {
 		flex-direction: row;
@@ -260,13 +248,9 @@ label {
 		max-width: 500px;
 	}
 
-
-	 .form-container {
-		padding: 40px;
-	}
 	input::placeholder,
 	input {
-		
+		font-size: 14px;
 		height: 30px;
 	}
 	 .form-footer {

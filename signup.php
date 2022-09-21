@@ -337,11 +337,13 @@ input[type=submit] {
             <a href=" login.php">LOGIN</a>
         </div>
     </nav>
-    <section id="intro">
-        <div class="container">
-            <div class="left-col">
 
-            </div>
+
+    <section id="intro">
+        <!-- <div class="container">
+            <div class="left-col"></div> -->
+
+            
             <div class="right-col">
 
                 <div class="form-container">
@@ -425,7 +427,7 @@ input[type=submit] {
                             <label for="Confirm">Confirm Password</label>
                             <input name='Confirm' id="Confirm" value="" type="password" required="true">
                             <img src="./img/icon-error (1).svg" class="error-icon" alt="" id='i9'>
-                            <p class="error-text" id='nine'>Password not matching</p>
+                            <p class="error-text" id='nine'>Password does not match with each other</p>
                             <?php if (isset($g)) {
                                 echo $g;
                             } ?>
@@ -437,7 +439,6 @@ input[type=submit] {
                             <?php if (isset($reg)) {
                                 echo $reg;
                             } ?>
-                        <p class="form-footer">By clicking the button, you are agreeing to our <span>Terms and Services</span></p>
                     </form>
                 </div>
 
