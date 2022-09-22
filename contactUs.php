@@ -121,7 +121,7 @@ $pop='';
     <section class="my-5">
     
       <!-- Section heading -->
-      <h2 class="h1-responsive font-weight-bold text-center my-5">Contact us</h2>
+      <h2 class="h1-responsive font-weight-bold text-center my-5">Contact Us</h2>
 
 
     <!-- contact form -->
@@ -131,7 +131,6 @@ $pop='';
             <div class="col-lg-8 mb-5 mb-lg-0">
                 <div class="form-title">
                     <h5>If you need anything please don't hesitate to contact us</h5>
-                    <!-- <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Pariatur, ratione! Laboriosam est, assumenda. Perferendis, quo alias quaerat aliquid. Corporis ipsum minus voluptate? Dolore, esse natus!</p> -->
                 </div>
                  <div id="form_status"></div>
                 <div class="contact-form">
