@@ -164,7 +164,7 @@ $pop='';
       <div class="col-lg-6 col-md-6 col-12 order-1 order-md-2">
         <div class="section-title ml-lg-5">
          
-          <h4 class="title mb-4 display-4 "><span class="custom"> Multi</span> color </h4>
+          <h4 class="title mb-4 display-4 "><span class="custom"> Multi</span>color</h4>
           <p class="text-muted mb-0 cus">I'm a full stack web developer who's intrested in art,
              I have developed this website to help people who loves art, 
              and to help the artiest to market themselves throughout this website.
@@ -175,21 +175,6 @@ $pop='';
       <!--end col-->
     </div>
     <!--enr row-->
-
-<!-- Start Features Section -->
-
-
-        
-      <section id="features">
-  
-    <div class="feature-cards">
-      <div class="feature-item"><i class="fa-solid fa-truck-fast feature-icon" style="font-size: 60px;"></i><h5 style="margin-top: 13px; color: #15778d;">Fast Shipping</h5></div>
-      <div class="feature-item"><i class="fa-sharp fa-solid fa-ranking-star feature-icon" style="font-size: 60px;"></i><h5 style="margin-top: 13px; color: #15778d;">Best Quality</h5></div>  
-      <div class="feature-item"><i class="fas fa-4x fa-check feature-icon" style="font-size: 60px;"></i></i><h5 style="margin-top: 13px; color: #15778d;">Start stitching</h5></div>
-
-  </section>
-
-<!-- End Feature Section -->
 
 
     <div class=" py-5 flx">

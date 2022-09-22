@@ -1,11 +1,4 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
-body{
-  
- /* background-color: #0F848C; */
-  /* font-family: 'Orbitron', sans-serif;
-  letter-spacing: 3px; */
-}
-
 
 *{
 	margin: 0;
@@ -76,7 +69,7 @@ html {
     margin-top: 20px;
     margin-bottom: 33px;
     font-weight: bolder;
-    color: #ffffff;
+    color: #653B88;
     font-size: xx-large;
 	font-weight: 700;
 }
@@ -92,7 +85,7 @@ html {
 	margin-bottom: 25px;
 }
 
- label {
+label {
     text-align: left;
     margin-bottom: 5px;
     font-size: 16px;
