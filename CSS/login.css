@@ -32,7 +32,7 @@ nav{
 	background-color: #92b1e065;
   }
   
-  nav a{
+nav a{
 	color: #8461a8;
 	text-decoration: none;
 	font-family: 'Times New Roman', Times, serif;
@@ -41,22 +41,14 @@ nav{
 	
   }
 
-.tab1 a, .tab2 a{
-  display: block;
-  color: #17868e;
-  text-decoration: none;
-  margin: 0 15px;
-}
-
 .error-icon,
 .error-text {
 	display: none;
 }
-
 html {
+	
 	font-family: 'Poppins', sans-serif;
 }
-
 #intro {
 	min-height: 100vh;
 	width: 100%;
@@ -65,7 +57,6 @@ html {
 	justify-content: center;
 	padding: 100px 0;
 }
-
 .container {
 	display: flex;
 	align-items: center;
@@ -81,7 +72,6 @@ html {
 }
 
 .h1{
-
     text-align: center;
     margin-top: 20px;
     margin-bottom: 33px;
@@ -92,7 +82,7 @@ html {
 }
 
  .form-container {
-	background-color: #ddc5f4;
+	background-color: #ddc5f4b8;
 	padding: 30px;
 	box-shadow: 10 20px #ddc5f48b;
 }
@@ -114,10 +104,12 @@ html {
  button[type = submit] {
 	width: 100%;
 	height: 60px;
+	border: 1.3px solid hsl(246, 25%, 77%);
 	padding-left: 20px;
 	outline: none;
 	color: hsl(249, 10%, 26%);
 	font-family: 'Poppins', sans-serif;
+	font-size: 10px;
 }
 
  input:focus {
@@ -172,27 +164,13 @@ html {
 
 @media only screen and (min-width: 1000px) {
 	#intro {
-		background-image: url(https://cdn.discordapp.com/attachments/944998982449528843/1022258752394629211/Pngtreeblue_purple_doted_line_wavy_5901827.png);
+		background-image: url(https://account.artwounds.com/templates/bredh-moon/img/header/h_bg_02.svg);
 		background-repeat: no-repeat;
 		background-size: cover;
 	}
 
 	.container {
 		flex-direction: row;
-	}
-
-	.left-col {
-		text-align: left;
-		padding-right: 50px;
-	}
-
-	.left-col h1 {
-		font-size: 3rem;
-		line-height: 3.5rem;
-	}
-
-	.left-col p {
-		font-size: 1.1rem;
 	}
 
 	.right-col {
@@ -209,10 +187,6 @@ html {
 		height: 40px;
 	}
 
-	 .form-footer {
-		margin-top: 20px;
-		font-size: .7rem;
-	}
 }
 
 #footerdiv{

@@ -110,7 +110,7 @@ html {
 
  .form-container {
 	padding: 40px;
-	background-color: #bfecef;
+	background-color: #bfecef9a;
 	padding: 30px;
 }
 
@@ -139,7 +139,7 @@ label {
 	outline: none;
 	color: hsl(249, 10%, 26%);
 	font-family: 'Poppins', sans-serif;
-	font-size: 16px;
+	font-size: 10px;
 }
 
 
@@ -175,13 +175,20 @@ label {
 	color: hsl(246, 25%, 77%);
 }
 
+
+.form-footer span {
+	color: #3FB4BE;
+	font-weight: 700;
+}
+
+
 .error-text {
 	text-align: right;
 	bottom: 0;
 	right: 0;
 	font-size: 12px;
 	font-style: italic;
-	color: red;
+	color: hsl(0, 100%, 3%);
 	font-weight: 500;
 }
 
@@ -250,7 +257,7 @@ label {
 
 	input::placeholder,
 	input {
-		font-size: 14px;
+		font-size: 15px;
 		height: 30px;
 	}
 	 .form-footer {
