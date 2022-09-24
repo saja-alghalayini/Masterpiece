@@ -3,18 +3,13 @@ body{
     background-color: #eaeaea;
 }
 
-/* *{
-    font-family: 'Times New Roman', Times, serif';
-} */
-
-
 nav{
     display: flex;
     align-items: center;
     justify-content: space-between;
     flex-direction: row;
     padding-right: 50px;
-    background-color: #92b1e054;
+    background-color: #92b1e065;
   }
   
   nav a{
@@ -45,8 +40,6 @@ h1{
     flex-wrap: wrap;
     gap: 6%;
     justify-content: center;
-    border: 1px;
-    box-shadow: 0 4px 8px 0 rgba(150, 48, 163, 0.248), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #parent div{
@@ -59,9 +52,17 @@ h1{
     height: 40vh;
 }
 
-/* .fa-star {
-    color: goldenrod;
-} */
+.mess{
+    padding: 20px;
+    background-color: rgb(120, 116, 135);
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    font-size: 22px;
+    display: none;
+}
 
 a{
     color: black;

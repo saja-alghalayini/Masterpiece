@@ -183,18 +183,92 @@ if(!isset($_GET["id"])){
 <!-- End Feature Section -->
 
 
-
-
   
     <h1 id="categories-h1"> Our Categories </h1>
 
     <div id="categories">
-        <a class="CatCards" id ="cat1" style="width: 20%;" href="<?php echo $categorypath.'cat_id=1' ?>">Impressionism Art</a>
-        <a class="CatCards" id ="cat2" style="width: 20%;" href="<?php echo $categorypath.'cat_id=2' ?>">Pop-Up Art</a>
-        <a class="CatCards" id ="cat3" style="width: 20%;" href="<?php echo $categorypath.'cat_id=3' ?>">Abstract Art</a>
-        <a class="CatCards" id ="cat4" style="width: 20%;" href="<?php echo $categorypath.'cat_id=4' ?>">Lorem</a>
-    </div>
-     
+    <div class="deck">
+                  <div class="card hovercard">
+                    <div class="front face" id ="cat1">
+                      <h2> Impressionism Art </h2>
+                      
+                    </div>
+
+                    <div class="back face">
+                      <h2> About it </h2>
+                      <p style="margin: 9px; text-align: center;"> It is a 19th-century art movement characterized by relatively small,
+                          thin, yet visible brush strokes, open composition, 
+                          emphasis on accurate depiction of light in its changing qualities </p>
+
+                      <a href="<?php echo $categorypath.'cat_id=1' ?>" >See Products</a>
+
+                    </div>
+                  </div>
+                </div>
+
+                
+    <div class="deck">
+                  <div class="card hovercard">
+                    <div class="front face" id ="cat1">
+                      <h2> Pop-Up Art </h2>
+                      
+                    </div>
+
+                    <div class="back face">
+                      <h2> About it </h2>
+                      <p style="margin: 9px; text-align: center;"> A pop-up exhibition is a temporary art event, 
+                        less formal than a gallery or museum but more formal than private artistic showing of work </p>
+
+                          <a href="<?php echo $categorypath.'cat_id=2' ?>">See Products</a>
+
+                    </div>
+                  </div>
+                </div>
+
+
+    <div class="deck">
+                  <div class="card hovercard">
+                    <div class="front face" id ="cat1">
+                      <h2> Abstract Art </h2>
+                      
+                    </div>
+
+                    <div class="back face">
+                      <h2> About it </h2>
+                      <p style="margin: 9px; text-align: center;"> It is an that does not attempt to represent an
+                          accurate depiction of a visual reality but instead use shapes,
+                          colours, forms and gestural marks to achieve its effect </p>
+
+                          <a href="<?php echo $categorypath.'cat_id=3' ?>">See Products</a>
+
+                    </div>
+                  </div>
+                </div>
+
+
+    <div class="deck">
+                  <div class="card hovercard">
+                    <div class="front face" id ="cat1">
+                      <h2> Renaissance Art </h2>
+                      
+                    </div>
+
+                    <div class="back face">
+                      <h2> About it </h2>
+                      <p style="margin: 9px; text-align: center;"> it is the painting, sculpture, and decorative arts of
+                          the period of European history, Renaissance art took
+                          as its foundation the art of Classical antiquity,
+                          perceived as the noblest of ancient traditions </p>
+
+                          <a href="<?php echo $categorypath.'cat_id=4' ?>">See Products</a>
+
+                    </div>
+                  </div>
+                </div>
+                </div>
+
+
+
 
     <h1 id="discount-h1"> Our Discount Section </h1>
 
@@ -230,11 +304,6 @@ if(!isset($_GET["id"])){
 
  
 
-
-    
-
-
-      
     <!-- ------------------ Footer ------------------ -->
 
     

@@ -188,14 +188,14 @@ $contact= ' contactUS.php?id='.$id;
                     <td style="position: relative;">
                     
                         <div style="left: 0; margin: auto; display: flex; justify-content: space-around; align-items: center; width: 200px;">
-                            <a href=" cart.php?id='.$id.'&del_pro='.$row['id'].'"><i style="position: absolute; left: 10px; color:#7997c5" class="fa-solid fa-square-xmark"></i></a>
+                            <a href=" cart.php?id='.$id.'&del_pro='.$row['id'].'"><i style="position: absolute; left: 10px; color: rgba(255, 0, 0, 0.705); margin-top: -17px;" class="fa-solid fa-square-xmark"></i></a>
                             <img src="'. $row['image'] .'" width="50px" alt="">
-                            <span>'.$row['name'].'</span>
+                            <span style="font-size: 16px; font-weight: 600;">'.$row['name'].'</span>
                         </div>
                     </td>
 
 
-                    <td>$'.$row['price'].'</td>
+                    <td style="font-size: 16px; font-weight: 600;">$'.$row['price'].'</td>
                     <td>
 
                         <input type="hidden" value="'.$row['product_id'].'" name="product_id'.$i.'">
@@ -203,7 +203,7 @@ $contact= ' contactUS.php?id='.$id;
                     </td>
 
 
-                    <td>$'.($row['price']*$row['quantity']).'</td>
+                    <td style="font-size: 16px; font-weight: 700;">$'.($row['price']*$row['quantity']).'</td>
                     </tr>';
     
 
@@ -219,7 +219,7 @@ $contact= ' contactUS.php?id='.$id;
                 ?>
 
                     <tr>
-                        <td colspan="4" style="text-align: center; margin: auto;">
+                        <td colspan="4" style="text-align: center; float: left;">
                             <input type="submit" value="Save Changes" name="save" class="change">
                         </td>
                     </tr>

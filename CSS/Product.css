@@ -59,7 +59,6 @@ h4 {
     color: #B3E8E5;
     display: block;
     text-align: center;
-    color: white;
     border: none;
     width: 50%;
     border-radius: 50px;
@@ -87,13 +86,15 @@ hr {
 
 #addreview h3 {
     color: #3092a9cf;
+    font-size: 20px;
 }
 
 
 textarea {
     width: 80%;
     height: 20vh;
-    color: #83bac7cd;
+    color: #3092a9cf;
+    font-size: 18px;
 }
 
 .Reviews{

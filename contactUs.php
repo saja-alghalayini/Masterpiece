@@ -88,6 +88,7 @@ $pop='';
             </div>
             
             <div>
+                
             <?php
               echo '<a class="num" href="' . $cartpath . '">
               '.$pop.'<i class="fa fa-shopping-cart" aria-hidden="true"></i></a>';

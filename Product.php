@@ -230,7 +230,7 @@ $pop='';
 
                 echo '<div id="revs">
                                 <p><img src= "'.$imgsrc.'" style="width: 5%; height: 5%; border-radius:100%;"> <span style="position: relative; bottom:15px;">' . $row2['first_name'] . ' ' . $row2['last_name'] . '</span> </p>
-                                <p style="font-size: 20px; color: #7997c5d1;">' . $row2['comment'] . '</p>
+                                <p style="font-size: 20px; color: #3092a9cf;">' . $row2['comment'] . '</p>
                             </div>';
             }
         }
