@@ -256,15 +256,6 @@ h4{
     margin: 20px auto;
 }
 
-.CatCards{
-    border: none;
-    padding: 2.5px ;
-    display: block;
-    /* width: 200px !important; */
-    font-size: 20px;
-    text-align: center;
-    margin: 20px auto;
-}
 
 #price_befor{ 
     color: #614a7dc0;

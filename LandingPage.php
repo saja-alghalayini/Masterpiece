@@ -210,14 +210,14 @@ if(!isset($_GET["id"])){
     <div class="deck">
                   <div class="card hovercard">
                     <div class="front face" id ="cat1">
-                      <h2> Pop-Up Art </h2>
+                      <h2> Realism Art </h2>
                       
                     </div>
 
                     <div class="back face">
                       <h2> About it </h2>
-                      <p style="margin: 9px; text-align: center;"> A pop-up exhibition is a temporary art event, 
-                        less formal than a gallery or museum but more formal than private artistic showing of work </p>
+                      <p style="margin: 9px; text-align: center;"> It's generally the attempt to represent subject
+                       matter truthfully, without artificiality and avoiding speculative fiction and supernatural elements. </p>
 
                           <a href="<?php echo $categorypath.'cat_id=2' ?>">See Products</a>
 

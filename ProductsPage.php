@@ -166,10 +166,10 @@ $pop='';
             // ------------------ Products with sale ------------------ //
                     $pbs = floor(($row['price']) / ((100 - $row['sale_pre']) / 100));// Before Sale Price
 
-                    echo '<div>
+                    echo '<div class="singleProduct">
                          <a href=" Product.php?pro_id=' . $row["id"] . $loginpath . '"><img src="' . $row["image"] . '" alt="Product"></a>
                          
-                         <h5>' . $row["category_name"] . '</h5>
+                         <h4>' . $row["category_name"] . '</h4>
                          <a href=" Product.php?pro_id=' . $row["id"] . $loginpath . '">  <h3>' . $row["name"] . '</h3></a>
 
 
@@ -201,9 +201,9 @@ $pop='';
                         $cartpath = " login.php";
                     }
 
-                    echo '<div>
+                    echo '<div class="singleProduct">
                         <a href=" Product.php?pro_id=' . $row["id"] . $loginpath . '"> <img src="' . $row["image"] . '" alt="Product"></a>
-                        <h5>' . $row["category_name"] . '</h5>
+                        <h4>' . $row["category_name"] . '</h4>
 
                         <a ihref=" Product.php?pro_id=' . $row["id"] . $loginpath . '"> <h3>' . $row["name"] . '</h3> </a>
                         <h2 style="margin-top: 30px;" class="rearrange">' . $row["price"] . ' JD </h2>

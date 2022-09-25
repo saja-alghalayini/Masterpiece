@@ -227,7 +227,7 @@ if (isset($_POST['submit'])) {
         mysqli_close($conn);
 
         echo "<script language='javascript'>
-        setTimeout(() => {window.location.href = ' login.php';}, 3000);
+        setTimeout(() => {window.location.href = ' login.php';}, 5000);
         
         </script>";
 
