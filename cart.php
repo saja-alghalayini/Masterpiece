@@ -195,7 +195,7 @@ $contact= ' contactUS.php?id='.$id;
                     </td>
 
 
-                    <td style="font-size: 16px; font-weight: 600;">$'.$row['price'].'</td>
+                    <td style="font-size: 16px; font-weight: 600;">'.$row['price'].' JD</td>
                     <td>
 
                         <input type="hidden" value="'.$row['product_id'].'" name="product_id'.$i.'">
@@ -203,7 +203,7 @@ $contact= ' contactUS.php?id='.$id;
                     </td>
 
 
-                    <td style="font-size: 16px; font-weight: 700;">$'.($row['price']*$row['quantity']).'</td>
+                    <td style="font-size: 16px; font-weight: 700;">'.($row['price']*$row['quantity']).' JD</td>
                     </tr>';
     
 

@@ -165,9 +165,9 @@ $pop='';
         <div class="section-title ml-lg-5">
          
           <h4 class="title mb-4 display-4 "><span class="custom"> Multi</span>color</h4>
-          <p class="text-muted mb-0 cus">I'm a full stack web developer who is interested in art.
-             I developed this website to assist those who enjoy art and to assist artists in marketing themselves.
-             <br>Check out our fabulous Artist work in our shop, and don't forget to look through our categories as well.
+          <p class="text-muted mb-0 cus">I'm a full-stack web developer with a passion for art.
+             I created this website to help those who like art as well as help artists market themselves.
+             <br> Check out our fantastic Artist work at our shop, and don't forget to check our categories.
              </p>
         </div>
       </div>
