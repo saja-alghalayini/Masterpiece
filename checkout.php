@@ -253,7 +253,7 @@ if ($result6->num_rows > 0) {
                     <p style="text-align: center;">copyright <i class="fa-solid fa-copyright"></i> 2022 Multicolor</p>
         </div>
         <div class="col-3">
-        <h1> What Artiest Said </h1>
+        <h1> What Artists Said </h1>
        
 <p> If I could say it in words there would be no reason to paint.<br>
 — Edward Hopper. <b>

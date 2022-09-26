@@ -239,7 +239,7 @@ $pop='';
         </div>
 
         <div class="col-3">
-        <h1> What Artiest Said </h1>
+        <h1> What Artists Said </h1>
        
         <p> If I could say it in words there would be no reason to paint.<br>
         — Edward Hopper. <b>

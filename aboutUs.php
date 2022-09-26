@@ -165,10 +165,9 @@ $pop='';
         <div class="section-title ml-lg-5">
          
           <h4 class="title mb-4 display-4 "><span class="custom"> Multi</span>color</h4>
-          <p class="text-muted mb-0 cus">I'm a full stack web developer who's intrested in art,
-             I have developed this website to help people who loves art, 
-             and to help the artiest to market themselves throughout this website.
-             <br>You can check our fabulous Artest work in our shop and don't forget to see our categories as well
+          <p class="text-muted mb-0 cus">I'm a full stack web developer who is interested in art.
+             I developed this website to assist those who enjoy art and to assist artists in marketing themselves.
+             <br>Check out our fabulous Artist work in our shop, and don't forget to look through our categories as well.
              </p>
         </div>
       </div>
@@ -229,7 +228,7 @@ $pop='';
             <p style="text-align: center;">copyright <i class="fa-solid fa-copyright"></i> 2022 Multicolor</p>
         </div>
         <div class="col-3">
-        <h1> What Artiest Said </h1>
+        <h1> What Artists Said </h1>
        
 <p> If I could say it in words there would be no reason to paint.<br>
 — Edward Hopper. <b>

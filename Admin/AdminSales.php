@@ -55,11 +55,11 @@ if($check > 0){
     <table>
     <tr>
                 <th>Order ID</th>
+                <th>User ID</th>
                 <th>Product Name</th>
+                <th>Bill ID</th>
                 <th>Price</th>
                 <th>Quantity</th>
-                <th>User ID</th>
-                <th>Bill ID</th>
             </tr>
             <?php
             if($resultcheck > 0)
@@ -68,11 +68,11 @@ if($check > 0){
                     {
             echo '<tr>
                     <td>'.$row['order_id'].'</td>
+                    <td>'.$row['user_id'].'</td>
                     <td>'.$row['name'].'</td>
+                    <td>'.$row['bill_id'].'</td>
                     <td>'.$row['price'].'</td>
                     <td>'.$row['quantity'].'</td>
-                    <td>'.$row['user_id'].'</td>
-                    <td>'.$row['bill_id'].'</td>
                 </tr>';
                 }
                 }
