@@ -77,10 +77,8 @@ if (isset($_POST['submit'])){
 
 
   <section id="intro">
-    <!-- <div class="container">
-      <div class="left-col"></div> -->
-      
-      
+
+  
       <div class="right-col">
         
         <div class="form-container">
